@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catalogue des templates Excel professionnels FlissiDigital — gestion des risques, contrôle financier, transport et logistique." />
+  <title>Produits — FlissiDigital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      padding: 120px 0 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(63,175,158,.12) 0%, transparent 70%);
+    }
+    .page-hero > * { position: relative; }
+    .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--white); margin-bottom: 14px; }
+    .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,.65); max-width: 540px; margin: 0 auto; }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1.5px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-600);
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--emerald);
+      color: var(--emerald-dark);
+      background: rgba(63,175,158,.07);
+    }
+
+    .products-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .platform-badges {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 600;
+      border: 1.5px solid;
+      transition: all var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .platform-badge.gumroad {
+      color: #ff90e8;
+      border-color: rgba(255,144,232,.35);
+      background: rgba(255,144,232,.07);
+    }
+    .platform-badge.gumroad:hover { background: rgba(255,144,232,.18); }
+    .platform-badge.payhip {
+      color: #3b82f6;
+      border-color: rgba(59,130,246,.3);
+      background: rgba(59,130,246,.07);
+    }
+    .platform-badge.payhip:hover { background: rgba(59,130,246,.18); }
+
+    .section-anchor { scroll-margin-top: 90px; }
+
+    @media (max-width: 1024px) { .products-full-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 640px) { .products-full-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">F</div>
+        <span class="logo-text">Flissi<span>Digital</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="products.html">Produits</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Devis sur mesure</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="badge">Catalogue complet</span>
+    <h1>Tous nos templates Excel</h1>
+    <p>Des outils professionnels pour chaque besoin métier. Téléchargez et utilisez immédiatement.</p>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filtres -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Tous les templates</button>
+      <button class="filter-btn" data-filter="risk">🛡️ Gestion des risques</button>
+      <button class="filter-btn" data-filter="finance">📊 Contrôle financier</button>
+      <button class="filter-btn" data-filter="logistics">🚛 Transport & logistique</button>
+    </div>
+
+    <!-- === RISQUES === -->
+    <div id="risk" class="section-anchor" style="margin-bottom:16px">
+      <span class="badge">Gestion des risques</span>
+      <h2 class="section-title" style="margin-bottom:32px">Templates Risques</h2>
+    </div>
+
+    <div class="products-full-grid" style="margin-bottom:72px" data-category="risk">
+
+      <div class="product-card">
+        <div class="product-thumb risk">
+          <span class="product-thumb-icon">🛡️</span>
+          <span class="product-category">Risques</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Registre des Risques & Tableau de Bord</h3>
+          <p class="product-desc">Le template complet pour identifier, évaluer, prioriser et suivre tous vos risques opérationnels. Matrice dynamique et alertes automatiques.</p>
+          <ul class="product-features">
+            <li class="product-feature">Matrice de criticité 5×5 interactive</li>
+            <li class="product-feature">Scoring automatique (probabilité × impact)</li>
+            <li class="product-feature">Plan d'actions correctives intégré</li>
+            <li class="product-feature">Dashboard KPI avec graphiques</li>
+            <li class="product-feature">Export rapport PDF</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">19€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb risk">
+          <span class="product-thumb-icon">📋</span>
+          <span class="product-category">Risques</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Plan de Continuité d'Activité (PCA)</h3>
+          <p class="product-desc">Structurez et documentez votre PCA : analyse d'impact, scénarios de crise, procédures de reprise et suivi des tests.</p>
+          <ul class="product-features">
+            <li class="product-feature">Analyse BIA (Business Impact Analysis)</li>
+            <li class="product-feature">Fiches scénarios de crise</li>
+            <li class="product-feature">Procédures de reprise documentées</li>
+            <li class="product-feature">Calendrier de tests PCA</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">22€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb risk">
+          <span class="product-thumb-icon">🔍</span>
+          <span class="product-category">Risques</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Audit Interne — Grille d'Évaluation</h3>
+          <p class="product-desc">Outillez vos missions d'audit interne avec des grilles de contrôle, un scoring de maturité et des fiches d'observations standardisées.</p>
+          <ul class="product-features">
+            <li class="product-feature">Grilles de contrôle par domaine</li>
+            <li class="product-feature">Notation de maturité des contrôles</li>
+            <li class="product-feature">Fiches observations & recommandations</li>
+            <li class="product-feature">Rapport d'audit automatisé</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">25€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- === FINANCE === -->
+    <div id="finance" class="section-anchor" style="margin-bottom:16px">
+      <span class="badge">Contrôle financier</span>
+      <h2 class="section-title" style="margin-bottom:32px">Templates Finance</h2>
+    </div>
+
+    <div class="products-full-grid" style="margin-bottom:72px" data-category="finance">
+
+      <div class="product-card">
+        <div class="product-thumb finance">
+          <span class="product-thumb-icon">📊</span>
+          <span class="product-category">Finance</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Suivi Budgétaire & Contrôle des Écarts</h3>
+          <p class="product-desc">Pilotez votre budget mensuel avec une vue comparative Prévu / Réalisé / Écart. Alertes automatiques et graphiques dynamiques inclus.</p>
+          <ul class="product-features">
+            <li class="product-feature">Tableau réalisé / prévu / écart</li>
+            <li class="product-feature">Graphiques de tendance automatiques</li>
+            <li class="product-feature">Alertes seuil configurables (couleur)</li>
+            <li class="product-feature">Synthèse mensuelle et annuelle</li>
+            <li class="product-feature">Compatible multi-centres de coûts</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">24€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb finance">
+          <span class="product-thumb-icon">💰</span>
+          <span class="product-category">Finance</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Tableau de Trésorerie Prévisionnelle</h3>
+          <p class="product-desc">Anticipez vos besoins de financement avec un prévisionnel de trésorerie glissant sur 12 mois. Scénarios optimiste / pessimiste intégrés.</p>
+          <ul class="product-features">
+            <li class="product-feature">Prévisionnel 12 mois glissants</li>
+            <li class="product-feature">3 scénarios comparatifs</li>
+            <li class="product-feature">Gestion des décalages de paiement</li>
+            <li class="product-feature">Graphique solde cumulé</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">22€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb finance">
+          <span class="product-thumb-icon">📈</span>
+          <span class="product-category">Finance</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Reporting Financier Mensuel</h3>
+          <p class="product-desc">Générez automatiquement vos reportings mensuels : compte de résultat, indicateurs financiers clés et tableaux pour votre direction.</p>
+          <ul class="product-features">
+            <li class="product-feature">Compte de résultat synthétique</li>
+            <li class="product-feature">Ratios financiers automatiques</li>
+            <li class="product-feature">Graphiques pour comité de direction</li>
+            <li class="product-feature">Comparaison N / N-1</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">26€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- === LOGISTIQUE === -->
+    <div id="logistics" class="section-anchor" style="margin-bottom:16px">
+      <span class="badge">Transport & logistique</span>
+      <h2 class="section-title" style="margin-bottom:32px">Templates Logistique</h2>
+    </div>
+
+    <div class="products-full-grid" data-category="logistics">
+
+      <div class="product-card">
+        <div class="product-thumb logistics">
+          <span class="product-thumb-icon">🚛</span>
+          <span class="product-category">Logistique</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Tableau de Bord Transport & Livraisons</h3>
+          <p class="product-desc">Supervisez tous vos flux transport, suivez vos transporteurs et analysez vos coûts par route et par mois.</p>
+          <ul class="product-features">
+            <li class="product-feature">Suivi des livraisons et statuts</li>
+            <li class="product-feature">KPIs transporteurs automatisés</li>
+            <li class="product-feature">Analyse des coûts par route</li>
+            <li class="product-feature">Taux de service et ponctualité</li>
+            <li class="product-feature">Alertes retards configurables</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">22€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb logistics">
+          <span class="product-thumb-icon">📦</span>
+          <span class="product-category">Logistique</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Gestion des Stocks & Inventaire</h3>
+          <p class="product-desc">Gérez votre stock en temps réel : entrées/sorties, valorisation, alertes de réapprovisionnement et inventaire tournant.</p>
+          <ul class="product-features">
+            <li class="product-feature">Fiche article avec historique mouvements</li>
+            <li class="product-feature">Valorisation FIFO / CMUP</li>
+            <li class="product-feature">Alertes stock minimum</li>
+            <li class="product-feature">Tableau de bord stock global</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">20€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb logistics">
+          <span class="product-thumb-icon">🗺️</span>
+          <span class="product-category">Logistique</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Plan de Tournées & Optimisation</h3>
+          <p class="product-desc">Planifiez et optimisez vos tournées de livraison : affectation des véhicules, suivi des km, coûts et analyse de rentabilité.</p>
+          <ul class="product-features">
+            <li class="product-feature">Planning des tournées hebdomadaire</li>
+            <li class="product-feature">Affectation véhicule / chauffeur</li>
+            <li class="product-feature">Suivi kilométrique et carburant</li>
+            <li class="product-feature">Analyse coût par livraison</li>
+          </ul>
+          <div class="product-footer">
+            <div class="product-price">21€ <span>achat unique</span></div>
+            <div></div>
+          </div>
+          <div class="platform-badges">
+            <a href="#" class="platform-badge gumroad" rel="noopener">⬇ Gumroad</a>
+            <a href="#" class="platform-badge payhip" rel="noopener">⬇ Payhip</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA CUSTOM -->
+<section class="cta-section">
+  <div class="container">
+    <span class="badge" style="background:rgba(63,175,158,.2);color:#5cc4b3;border:1px solid rgba(63,175,158,.3)">Besoin spécifique ?</span>
+    <h2 class="cta-title">Vous avez un besoin sur mesure ?</h2>
+    <p class="cta-desc">Je peux créer un template Excel personnalisé pour votre secteur ou vos processus internes. Contactez-moi pour un devis.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+      <a href="about.html" class="btn btn-outline">Découvrir mon expertise</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="color:white">
+          <div class="logo-icon">F</div>
+          <span class="logo-text">Flissi<span>Digital</span></span>
+        </a>
+        <p>Templates Excel professionnels conçus par un expert en audit et finance.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">G</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="products.html">Produits</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Produits</div>
+        <ul class="footer-links">
+          <li><a href="#risk">Gestion des risques</a></li>
+          <li><a href="#finance">Contrôle financier</a></li>
+          <li><a href="#logistics">Transport & logistique</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Acheter</div>
+        <ul class="footer-links">
+          <li><a href="#">Gumroad</a></li>
+          <li><a href="#">Payhip</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">CGV</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      if (filter === 'all') {
+        document.querySelectorAll('.products-full-grid, .section-anchor').forEach(el => el.style.display = '');
+      } else {
+        document.querySelectorAll('[data-category]').forEach(grid => {
+          const show = grid.dataset.category === filter;
+          grid.style.display = show ? 'grid' : 'none';
+          const anchor = document.getElementById(filter === grid.dataset.category ? filter : '');
+          if (anchor) anchor.style.display = show ? '' : 'none';
+        });
+        document.querySelectorAll('.section-anchor').forEach(anchor => {
+          anchor.style.display = (anchor.id === filter) ? '' : 'none';
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
