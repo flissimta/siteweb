@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,225 +10,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .page-hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-      padding: 120px 0 72px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(63,175,158,.12) 0%, transparent 70%);
-    }
+    .page-hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%); padding: 120px 0 72px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(63,175,158,.12) 0%, transparent 70%); }
     .page-hero > * { position: relative; }
     .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--white); margin-bottom: 14px; }
     .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,.65); max-width: 540px; margin: 0 auto; }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 56px;
-      align-items: start;
-    }
-
-    /* Info cards */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start; }
     .contact-info { display: flex; flex-direction: column; gap: 16px; }
-
-    .info-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 24px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      transition: all var(--transition);
-    }
+    .info-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; display: flex; align-items: flex-start; gap: 16px; transition: all var(--transition); }
     .info-card:hover { border-color: var(--emerald); box-shadow: var(--shadow); }
-
-    .info-icon {
-      width: 44px; height: 44px;
-      background: rgba(63,175,158,.1);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .info-title {
-      font-size: .9rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .info-value {
-      font-size: .88rem;
-      color: var(--gray-600);
-      line-height: 1.55;
-    }
-
+    .info-icon { width: 44px; height: 44px; background: rgba(63,175,158,.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .info-title { font-size: .9rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .info-value { font-size: .88rem; color: var(--gray-600); line-height: 1.55; }
     .info-value a { color: var(--emerald-dark); font-weight: 500; }
-
-    /* FAQ */
     .faq-section { margin-top: 36px; }
     .faq-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
-
-    .faq-item {
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
-      padding: 14px 18px;
-      font-size: .88rem;
-      font-weight: 600;
-      color: var(--navy);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      transition: background var(--transition);
-    }
+    .faq-item { border: 1px solid var(--gray-200); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 8px; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 14px 18px; font-size: .88rem; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background var(--transition); }
     .faq-question:hover { background: var(--gray-50); }
-
-    .faq-arrow {
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      background: var(--gray-100);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .7rem;
-      flex-shrink: 0;
-      transition: transform var(--transition);
-    }
-
-    .faq-answer {
-      font-size: .85rem;
-      color: var(--gray-600);
-      line-height: 1.65;
-      padding: 0 18px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease, padding .3s ease;
-    }
-
+    .faq-arrow { width: 20px; height: 20px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: .7rem; flex-shrink: 0; transition: transform var(--transition); }
+    .faq-answer { font-size: .85rem; color: var(--gray-600); line-height: 1.65; padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; }
     .faq-item.open .faq-arrow { transform: rotate(180deg); }
     .faq-item.open .faq-answer { max-height: 200px; padding: 0 18px 14px; }
 
-    /* Form */
-    .contact-form-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 40px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-title {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .form-subtitle {
-      font-size: .9rem;
-      color: var(--gray-400);
-      margin-bottom: 28px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-label {
-      display: block;
-      font-size: .85rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 7px;
-    }
-
+    .contact-form-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); }
+    .form-title { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+    .form-subtitle { font-size: .9rem; color: var(--gray-400); margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-size: .85rem; font-weight: 600; color: var(--navy); margin-bottom: 7px; }
     .form-label .required { color: var(--emerald); }
-
-    .form-input, .form-select, .form-textarea {
-      width: 100%;
-      padding: 11px 14px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: var(--radius-sm);
-      font-size: .92rem;
-      font-family: var(--font);
-      color: var(--gray-800);
-      background: var(--white);
-      transition: border-color var(--transition), box-shadow var(--transition);
-      outline: none;
-      appearance: none;
-    }
-
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--emerald);
-      box-shadow: 0 0 0 3px rgba(63,175,158,.12);
-    }
-
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 11px 14px; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); font-size: .92rem; font-family: var(--font); color: var(--gray-800); background: var(--white); transition: border-color var(--transition), box-shadow var(--transition); outline: none; appearance: none; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(63,175,158,.12); }
     .form-input::placeholder, .form-textarea::placeholder { color: var(--gray-400); }
-
     .form-textarea { resize: vertical; min-height: 140px; }
-
     .form-select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
-
-    .form-check {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
+    .form-check { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
     .form-check input { width: 16px; height: 16px; accent-color: var(--emerald); cursor: pointer; flex-shrink: 0; margin-top: 2px; }
-
     .form-check label { font-size: .83rem; color: var(--gray-600); line-height: 1.55; cursor: pointer; }
-
-    .form-submit {
-      width: 100%;
-      padding: 14px;
-      font-size: 1rem;
-      font-weight: 700;
-      background: var(--emerald);
-      color: var(--white);
-      border: none;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      transition: all var(--transition);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
+    .form-submit { width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; background: var(--emerald); color: var(--white); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all var(--transition); display: flex; align-items: center; justify-content: center; gap: 10px; }
     .form-submit:hover { background: var(--emerald-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(63,175,158,.35); }
 
-    @media (max-width: 900px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .contact-form-card { padding: 28px 20px; }
-    }
+    [dir="rtl"] .faq-question { text-align: right; flex-direction: row-reverse; }
+    [dir="rtl"] .form-select { background-position: left 14px center; padding-right: 14px; padding-left: 36px; }
+    [dir="rtl"] .form-check { flex-direction: row-reverse; }
+
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-form-card { padding: 28px 20px; } }
   </style>
 </head>
-<body>
+<body data-page="contact">
 
 <nav class="navbar">
   <div class="container">
@@ -238,28 +69,40 @@
         <span class="logo-text">Flissi<span>Digital</span></span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="products.html">Produits</a></li>
-        <li><a href="about.html">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Produits</a></li>
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
-      <a href="products.html" class="btn btn-primary btn-sm nav-cta">Voir les templates</a>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a href="products.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.cta">Voir les templates</a>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+      </div>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-menu">
-      <a href="index.html">Accueil</a>
-      <a href="products.html">Produits</a>
-      <a href="about.html">À propos</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="products.html" data-i18n="nav.products">Produits</a>
+      <a href="about.html" data-i18n="nav.about">À propos</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switcher" style="padding:8px 0">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="ar">عربي</button>
+      </div>
     </div>
   </div>
 </nav>
 
 <div class="page-hero">
   <div class="container">
-    <span class="badge">Contact</span>
-    <h1>Parlons de votre projet</h1>
-    <p>Question sur un template, besoin sur mesure ou support technique — je vous réponds sous 24h.</p>
+    <span class="badge" data-i18n="contact.hero.badge">Contact</span>
+    <h1 data-i18n="contact.hero.title">Parlons de votre projet</h1>
+    <p data-i18n="contact.hero.desc">Question sur un template, besoin sur mesure ou support technique — je vous réponds sous 24h.</p>
   </div>
 </div>
 
@@ -267,133 +110,111 @@
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Info sidebar -->
       <div>
         <div class="contact-info">
           <div class="info-card">
             <div class="info-icon">✉️</div>
             <div>
-              <div class="info-title">Email</div>
-              <div class="info-value"><a href="mailto:contact@flissidigital.com">contact@flissidigital.com</a><br>Réponse sous 24h ouvrées</div>
+              <div class="info-title" data-i18n="contact.info.1.title">Email</div>
+              <div class="info-value"><a href="mailto:contact@flissidigital.com">contact@flissidigital.com</a><br><span data-i18n="contact.info.1.val">Réponse sous 24h ouvrées</span></div>
             </div>
           </div>
-
           <div class="info-card">
             <div class="info-icon">💼</div>
             <div>
-              <div class="info-title">LinkedIn</div>
-              <div class="info-value"><a href="#" rel="noopener">Mourad Flissi</a><br>Pour les projets professionnels</div>
+              <div class="info-title" data-i18n="contact.info.2.title">LinkedIn</div>
+              <div class="info-value"><a href="#" rel="noopener">Mourad Flissi</a><br><span data-i18n="contact.info.2.val">Pour les projets professionnels</span></div>
             </div>
           </div>
-
           <div class="info-card">
             <div class="info-icon">⚡</div>
             <div>
-              <div class="info-title">Support acheteurs</div>
-              <div class="info-value">Vous avez acheté un template et besoin d'aide ? Contactez-moi directement via Gumroad ou Payhip.</div>
+              <div class="info-title" data-i18n="contact.info.3.title">Support acheteurs</div>
+              <div class="info-value" data-i18n="contact.info.3.val">Vous avez acheté un template et besoin d'aide ? Contactez-moi via Gumroad ou Payhip.</div>
             </div>
           </div>
-
           <div class="info-card">
             <div class="info-icon">🎨</div>
             <div>
-              <div class="info-title">Templates sur mesure</div>
-              <div class="info-value">Besoin d'un outil Excel spécifique ? Je développe des solutions personnalisées pour votre secteur.</div>
+              <div class="info-title" data-i18n="contact.info.4.title">Templates sur mesure</div>
+              <div class="info-value" data-i18n="contact.info.4.val">Besoin d'un outil Excel spécifique ? Je développe des solutions personnalisées pour votre secteur.</div>
             </div>
           </div>
         </div>
 
         <div class="faq-section">
-          <div class="faq-title">Questions fréquentes</div>
-
+          <div class="faq-title" data-i18n="contact.faq.title">Questions fréquentes</div>
           <div class="faq-item">
-            <button class="faq-question">
-              Comment recevoir mon template ?
-              <span class="faq-arrow">▾</span>
-            </button>
-            <div class="faq-answer">Après paiement sur Gumroad ou Payhip, vous recevez immédiatement un lien de téléchargement par email. Le fichier est au format .xlsx.</div>
+            <button class="faq-question"><span data-i18n="contact.faq.1.q">Comment recevoir mon template ?</span><span class="faq-arrow">▾</span></button>
+            <div class="faq-answer" data-i18n="contact.faq.1.a">Après paiement sur Gumroad ou Payhip, vous recevez immédiatement un lien de téléchargement par email.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-question">
-              Les templates fonctionnent-ils sur Mac ?
-              <span class="faq-arrow">▾</span>
-            </button>
-            <div class="faq-answer">Oui, tous les templates sont compatibles avec Excel sur Mac (Excel 2016+, Microsoft 365). Certaines mises en forme peuvent légèrement différer.</div>
+            <button class="faq-question"><span data-i18n="contact.faq.2.q">Les templates fonctionnent-ils sur Mac ?</span><span class="faq-arrow">▾</span></button>
+            <div class="faq-answer" data-i18n="contact.faq.2.a">Oui, tous les templates sont compatibles avec Excel sur Mac (Excel 2016+, Microsoft 365).</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-question">
-              Puis-je utiliser le template pour plusieurs entreprises ?
-              <span class="faq-arrow">▾</span>
-            </button>
-            <div class="faq-answer">La licence est personnelle (usage individuel). Pour un usage multi-entreprises ou en équipe, contactez-moi pour une licence professionnelle.</div>
+            <button class="faq-question"><span data-i18n="contact.faq.3.q">Puis-je utiliser le template pour plusieurs entreprises ?</span><span class="faq-arrow">▾</span></button>
+            <div class="faq-answer" data-i18n="contact.faq.3.a">La licence est personnelle (usage individuel). Pour un usage multi-entreprises, contactez-moi pour une licence professionnelle.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-question">
-              Y a-t-il une politique de remboursement ?
-              <span class="faq-arrow">▾</span>
-            </button>
-            <div class="faq-answer">Oui, si le template ne correspond pas à la description ou est défaillant, je propose un remboursement sous 7 jours. Contactez-moi directement.</div>
+            <button class="faq-question"><span data-i18n="contact.faq.4.q">Y a-t-il une politique de remboursement ?</span><span class="faq-arrow">▾</span></button>
+            <div class="faq-answer" data-i18n="contact.faq.4.a">Oui, remboursement sous 7 jours si le template ne correspond pas à la description. Contactez-moi directement.</div>
           </div>
-
         </div>
       </div>
 
-      <!-- Form -->
       <div class="contact-form-card">
-        <div class="form-title">Envoyez-moi un message</div>
-        <div class="form-subtitle">Toutes les réponses dans les 24h ouvrées.</div>
+        <div class="form-title" data-i18n="contact.form.title">Envoyez-moi un message</div>
+        <div class="form-subtitle" data-i18n="contact.form.subtitle">Toutes les réponses dans les 24h ouvrées.</div>
 
         <form id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="firstname">Prénom <span class="required">*</span></label>
-              <input class="form-input" type="text" id="firstname" name="firstname" placeholder="Mourad" required />
+              <label class="form-label" for="firstname"><span data-i18n="contact.form.firstname">Prénom</span> <span class="required">*</span></label>
+              <input class="form-input" type="text" id="firstname" name="firstname" data-i18n-ph="contact.form.ph.fn" placeholder="Mourad" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="lastname">Nom <span class="required">*</span></label>
-              <input class="form-input" type="text" id="lastname" name="lastname" placeholder="Flissi" required />
+              <label class="form-label" for="lastname"><span data-i18n="contact.form.lastname">Nom</span> <span class="required">*</span></label>
+              <input class="form-input" type="text" id="lastname" name="lastname" data-i18n-ph="contact.form.ph.ln" placeholder="Flissi" required />
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="email">Email <span class="required">*</span></label>
-            <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.com" required />
+            <label class="form-label" for="email"><span data-i18n="contact.form.email">Email</span> <span class="required">*</span></label>
+            <input class="form-input" type="email" id="email" name="email" data-i18n-ph="contact.form.ph.email" placeholder="votre@email.com" required />
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="company">Entreprise / Organisation</label>
-            <input class="form-input" type="text" id="company" name="company" placeholder="Nom de votre entreprise (optionnel)" />
+            <label class="form-label" for="company"><span data-i18n="contact.form.company">Entreprise / Organisation</span></label>
+            <input class="form-input" type="text" id="company" name="company" data-i18n-ph="contact.form.ph.co" placeholder="Nom de votre entreprise (optionnel)" />
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="subject">Objet <span class="required">*</span></label>
+            <label class="form-label" for="subject"><span data-i18n="contact.form.subject">Objet</span> <span class="required">*</span></label>
             <select class="form-select" id="subject" name="subject" required>
-              <option value="" disabled selected>Sélectionnez un objet</option>
-              <option value="question">Question sur un template</option>
-              <option value="support">Support technique</option>
-              <option value="custom">Demande de template sur mesure</option>
-              <option value="license">Licence professionnelle / équipe</option>
-              <option value="refund">Remboursement</option>
-              <option value="other">Autre</option>
+              <option value="" disabled selected data-i18n-opt="contact.form.sel.default">Sélectionnez un objet</option>
+              <option value="question" data-i18n-opt="contact.form.sel.1">Question sur un template</option>
+              <option value="support" data-i18n-opt="contact.form.sel.2">Support technique</option>
+              <option value="custom" data-i18n-opt="contact.form.sel.3">Demande de template sur mesure</option>
+              <option value="license" data-i18n-opt="contact.form.sel.4">Licence professionnelle / équipe</option>
+              <option value="refund" data-i18n-opt="contact.form.sel.5">Remboursement</option>
+              <option value="other" data-i18n-opt="contact.form.sel.6">Autre</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="message">Message <span class="required">*</span></label>
-            <textarea class="form-textarea" id="message" name="message" placeholder="Décrivez votre besoin ou votre question en détail…" required></textarea>
+            <label class="form-label" for="message"><span data-i18n="contact.form.message">Message</span> <span class="required">*</span></label>
+            <textarea class="form-textarea" id="message" name="message" data-i18n-ph="contact.form.ph.msg" placeholder="Décrivez votre besoin ou votre question en détail…" required></textarea>
           </div>
 
           <div class="form-check">
             <input type="checkbox" id="privacy" name="privacy" required />
-            <label for="privacy">J'accepte que mes données soient traitées dans le cadre de cette demande de contact, conformément à la <a href="#" style="color:var(--emerald-dark);font-weight:600">politique de confidentialité</a>.</label>
+            <label for="privacy" data-i18n-html="contact.form.privacy">J'accepte que mes données soient traitées dans le cadre de cette demande de contact, conformément à la <a href="#" style="color:var(--emerald-dark);font-weight:600">politique de confidentialité</a>.</label>
           </div>
 
           <button type="submit" class="form-submit">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            Envoyer le message
+            <span data-i18n="contact.form.submit">Envoyer le message</span>
           </button>
         </form>
       </div>
@@ -406,51 +227,45 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="color:white">
-          <div class="logo-icon">F</div>
-          <span class="logo-text">Flissi<span>Digital</span></span>
-        </a>
-        <p>Templates Excel professionnels conçus par un expert en audit et finance.</p>
-        <div class="footer-social">
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">𝕏</a>
-          <a href="#" class="social-btn">G</a>
-        </div>
+        <a href="index.html" class="nav-logo" style="color:white"><div class="logo-icon">F</div><span class="logo-text">Flissi<span>Digital</span></span></a>
+        <p data-i18n="footer.desc">Templates Excel professionnels conçus par un expert en audit et finance.</p>
+        <div class="footer-social"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">G</a></div>
       </div>
       <div>
-        <div class="footer-title">Navigation</div>
+        <div class="footer-title" data-i18n="footer.col.nav">Navigation</div>
         <ul class="footer-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="products.html">Produits</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Produits</a></li>
+          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-title">Produits</div>
+        <div class="footer-title" data-i18n="footer.col.prod">Produits</div>
         <ul class="footer-links">
-          <li><a href="products.html#risk">Gestion des risques</a></li>
-          <li><a href="products.html#finance">Contrôle financier</a></li>
-          <li><a href="products.html#logistics">Transport & logistique</a></li>
+          <li><a href="products.html#risk" data-i18n="footer.prod.risk">Gestion des risques</a></li>
+          <li><a href="products.html#finance" data-i18n="footer.prod.fin">Contrôle financier</a></li>
+          <li><a href="products.html#logistics" data-i18n="footer.prod.log">Transport & logistique</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-title">Acheter</div>
+        <div class="footer-title" data-i18n="footer.col.buy">Acheter</div>
         <ul class="footer-links">
           <li><a href="#">Gumroad</a></li>
           <li><a href="#">Payhip</a></li>
-          <li><a href="contact.html">Support</a></li>
+          <li><a href="contact.html" data-i18n="footer.support">Support</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.</span>
-      <div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">CGV</a></div>
+      <span data-i18n="footer.copy">© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px"><a href="#" data-i18n="footer.legal">Mentions légales</a><a href="#" data-i18n="footer.cgv">CGV</a></div>
     </div>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/translations.js"></script>
 <script>
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(btn => {
@@ -461,6 +276,48 @@
       if (!wasOpen) item.classList.add('open');
     });
   });
+
+  // Translate select options (not handled by data-i18n directly)
+  function translateSelectOptions(lang) {
+    const t = TRANSLATIONS[lang];
+    document.querySelectorAll('[data-i18n-opt]').forEach(option => {
+      const key = option.dataset.i18nOpt;
+      if (t && t[key]) option.textContent = t[key];
+    });
+  }
+
+  // Extend applyLang to also handle select options
+  const _origApplyLang = typeof applyLang !== 'undefined' ? applyLang : null;
+  document.addEventListener('DOMContentLoaded', () => {
+    translateSelectOptions(getLang());
+  });
+
+  // Watch for lang changes by observing html dir attribute
+  new MutationObserver(() => {
+    const lang = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'fr';
+    translateSelectOptions(lang);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  // Form submit with i18n success message
+  const contactForm = document.querySelector('#contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const lang = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'fr';
+      const successMsg = TRANSLATIONS[lang]['contact.form.sent'] || '✓ Message envoyé !';
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = successMsg;
+      btn.style.background = '#4ade80';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '';
+        btn.disabled = false;
+        contactForm.reset();
+      }, 3500);
+    });
+  }
 </script>
 </body>
 </html>

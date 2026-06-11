@@ -1,3 +1,6 @@
+/* ===== ARABIC FONT (Cairo) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -921,4 +924,203 @@ ul { list-style: none; }
   .section { padding: 72px 0; }
   .hero-stats { gap: 20px; flex-wrap: wrap; }
   .btn { padding: 11px 22px; font-size: .9rem; }
+}
+
+/* ===================================================================
+   LANGUAGE SWITCHER
+   =================================================================== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 12px;
+}
+
+.lang-sep {
+  color: rgba(255,255,255,.25);
+  font-size: .85rem;
+  user-select: none;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.5);
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 5px;
+  transition: all var(--transition);
+  letter-spacing: .03em;
+  line-height: 1;
+}
+
+.lang-btn:hover { color: var(--white); background: rgba(255,255,255,.07); }
+.lang-btn.active { color: var(--emerald); }
+
+/* RTL: flip switcher margin */
+[dir="rtl"] .lang-switcher { margin-left: 0; margin-right: 12px; }
+
+/* ===================================================================
+   RTL — ARABIC DIRECTION OVERRIDES
+   =================================================================== */
+
+/* Arabic font for RTL */
+[dir="rtl"],
+[dir="rtl"] body,
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea,
+[dir="rtl"] button {
+  font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Keep logo and file names in LTR */
+[dir="rtl"] .nav-logo,
+[dir="rtl"] .mockup-title-bar,
+[dir="rtl"] .platform-badge { direction: ltr; }
+
+/* ── Navbar RTL ── */
+[dir="rtl"] .nav-inner { flex-direction: row-reverse; }
+[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+[dir="rtl"] .nav-cta { margin-left: 0; margin-right: 8px; }
+[dir="rtl"] .mobile-menu a { text-align: right; }
+
+/* ── Hero RTL ── */
+[dir="rtl"] .hero-grid { direction: rtl; }
+[dir="rtl"] .hero-content { text-align: right; }
+[dir="rtl"] .hero-actions { justify-content: flex-start; }
+[dir="rtl"] .hero-stats { flex-direction: row-reverse; }
+[dir="rtl"] .hero-eyebrow { direction: rtl; }
+
+/* Floating badges: swap positions */
+[dir="rtl"] .float-badge.badge-1 { right: auto; left: -20px; }
+[dir="rtl"] .float-badge.badge-2 { left: auto; right: -24px; }
+
+/* ── Trust band RTL ── */
+[dir="rtl"] .trust-inner { flex-direction: row-reverse; }
+
+/* ── Section headers RTL ── */
+[dir="rtl"] .section-header { text-align: right; }
+[dir="rtl"] .section-header.centered { text-align: center; }
+[dir="rtl"] .section-subtitle { margin-left: auto; margin-right: 0; }
+[dir="rtl"] .section-header.centered .section-subtitle { margin: 12px auto 0; }
+
+/* ── Feature cards RTL ── */
+[dir="rtl"] .feature-card { text-align: right; }
+[dir="rtl"] .feature-card::before {
+  transform-origin: right;
+  right: 0; left: 0;
+}
+
+/* ── Product cards RTL ── */
+[dir="rtl"] .product-card { text-align: right; }
+[dir="rtl"] .product-features { text-align: right; }
+[dir="rtl"] .product-feature { flex-direction: row-reverse; }
+[dir="rtl"] .product-feature::before { margin-left: 8px; margin-right: 0; }
+[dir="rtl"] .product-footer { flex-direction: row-reverse; }
+
+/* ── Testimonials RTL ── */
+[dir="rtl"] .testimonial-card { text-align: right; }
+[dir="rtl"] .testimonial-card::before { left: auto; right: 24px; }
+[dir="rtl"] .testimonial-author { flex-direction: row-reverse; }
+
+/* ── CTA RTL ── */
+[dir="rtl"] .cta-section { text-align: center; }
+
+/* ── Footer RTL ── */
+[dir="rtl"] .footer-grid { direction: rtl; }
+[dir="rtl"] .footer-brand p { text-align: right; }
+[dir="rtl"] .footer-links { text-align: right; }
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-social { flex-direction: row-reverse; }
+
+/* ── About page — Timeline RTL ── */
+[dir="rtl"] .timeline {
+  padding-left: 0;
+  padding-right: 28px;
+}
+[dir="rtl"] .timeline::before {
+  left: auto;
+  right: 8px;
+}
+[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: -24px;
+}
+[dir="rtl"] .timeline-date,
+[dir="rtl"] .timeline-title,
+[dir="rtl"] .timeline-company { text-align: right; }
+
+/* ── About — expertise items RTL ── */
+[dir="rtl"] .expertise-item { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .value-card { text-align: center; } /* keep centered */
+
+/* ── Profile card RTL ── */
+[dir="rtl"] .profile-contact-link { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .profile-tags { justify-content: center; }
+[dir="rtl"] .bio-section h2 { text-align: right; }
+[dir="rtl"] .bio-section h2 { border-bottom: 2px solid var(--gray-100); }
+
+/* ── Contact page RTL ── */
+[dir="rtl"] .info-card { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .faq-question { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .form-label { text-align: right; display: block; }
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-select,
+[dir="rtl"] .form-textarea { text-align: right; direction: rtl; }
+[dir="rtl"] .form-select {
+  background-position: left 14px center;
+  padding-right: 14px;
+  padding-left: 36px;
+}
+[dir="rtl"] .form-check { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .contact-form-card { text-align: right; }
+
+/* ── Products page — filter bar RTL ── */
+[dir="rtl"] .filter-bar { flex-direction: row-reverse; }
+[dir="rtl"] .section-anchor { text-align: right; }
+
+/* ── Platform badges on product pages ── */
+[dir="rtl"] .platform-badges { flex-direction: row-reverse; }
+
+/* ── Page hero RTL ── */
+[dir="rtl"] .page-hero { direction: rtl; }
+
+/* ── Buttons with arrow SVG: flip in RTL ── */
+[dir="rtl"] .btn svg { transform: scaleX(-1); }
+
+/* ── Mockup KPI cards ── */
+[dir="rtl"] .kpi-card { text-align: right; }
+[dir="rtl"] .mockup-tags { flex-direction: row-reverse; }
+[dir="rtl"] .float-badge { flex-direction: row-reverse; }
+[dir="rtl"] .float-badge > div:last-child { text-align: right; }
+
+/* ── Form row in RTL ── */
+[dir="rtl"] .form-row { direction: rtl; }
+
+/* ── About grid RTL ── */
+[dir="rtl"] .about-grid { direction: rtl; }
+[dir="rtl"] .about-grid .bio-section p,
+[dir="rtl"] .about-grid .bio-section { text-align: right; }
+
+/* ── Expertise grid RTL ── */
+[dir="rtl"] .expertise-name,
+[dir="rtl"] .expertise-desc { text-align: right; }
+
+/* ── Hero visual: in RTL keep LTR for mockup content ── */
+[dir="rtl"] .dashboard-mockup { direction: ltr; }
+
+/* ── Hero stats RTL ── */
+[dir="rtl"] .hero-stats { direction: rtl; }
+[dir="rtl"] .stat-item { text-align: center; }
+
+/* ── Mobile responsive RTL fixes ── */
+@media (max-width: 768px) {
+  [dir="rtl"] .hero-actions { justify-content: center; }
+  [dir="rtl"] .hero-content { text-align: center; }
+  [dir="rtl"] .hero-eyebrow { margin: 0 auto 24px; }
+  [dir="rtl"] .section-header { text-align: center; }
+  [dir="rtl"] .section-subtitle { margin: 12px auto 0; }
 }

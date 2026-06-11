@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,278 +10,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .page-hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-      padding: 120px 0 72px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(63,175,158,.12) 0%, transparent 70%);
-    }
+    .page-hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%); padding: 120px 0 72px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(63,175,158,.12) 0%, transparent 70%); }
     .page-hero > * { position: relative; }
     .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--white); margin-bottom: 14px; }
     .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,.65); max-width: 540px; margin: 0 auto; }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 72px;
-      align-items: start;
-    }
-
-    .profile-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 36px;
-      text-align: center;
-      position: sticky;
-      top: 90px;
-      box-shadow: var(--shadow);
-    }
-
-    .profile-avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--emerald), var(--navy));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.4rem;
-      font-weight: 800;
-      color: var(--white);
-      margin: 0 auto 20px;
-      border: 4px solid var(--white);
-      box-shadow: 0 0 0 3px var(--emerald);
-    }
-
-    .profile-name {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .profile-title {
-      font-size: .9rem;
-      color: var(--emerald-dark);
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .profile-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .profile-tag {
-      background: var(--gray-100);
-      color: var(--gray-600);
-      font-size: .78rem;
-      font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 100px;
-    }
-
-    .profile-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .profile-stat {
-      background: var(--gray-50);
-      border-radius: var(--radius-sm);
-      padding: 14px 10px;
-      text-align: center;
-    }
-
-    .profile-stat-num {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--emerald-dark);
-    }
-
-    .profile-stat-label {
-      font-size: .75rem;
-      color: var(--gray-400);
-      margin-top: 3px;
-    }
-
-    .profile-contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .profile-contact-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: var(--radius-sm);
-      font-size: .88rem;
-      font-weight: 500;
-      color: var(--gray-600);
-      background: var(--gray-50);
-      transition: all var(--transition);
-      border: 1px solid var(--gray-200);
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 72px; align-items: start; }
+    .profile-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 36px; text-align: center; position: sticky; top: 90px; box-shadow: var(--shadow); }
+    .profile-avatar { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--emerald), var(--navy)); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; font-weight: 800; color: var(--white); margin: 0 auto 20px; border: 4px solid var(--white); box-shadow: 0 0 0 3px var(--emerald); }
+    .profile-name { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .profile-title { font-size: .9rem; color: var(--emerald-dark); font-weight: 600; margin-bottom: 20px; }
+    .profile-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px; }
+    .profile-tag { background: var(--gray-100); color: var(--gray-600); font-size: .78rem; font-weight: 600; padding: 5px 12px; border-radius: 100px; }
+    .profile-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .profile-stat { background: var(--gray-50); border-radius: var(--radius-sm); padding: 14px 10px; text-align: center; }
+    .profile-stat-num { font-size: 1.4rem; font-weight: 800; color: var(--emerald-dark); }
+    .profile-stat-label { font-size: .75rem; color: var(--gray-400); margin-top: 3px; }
+    .profile-contact-links { display: flex; flex-direction: column; gap: 10px; }
+    .profile-contact-link { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: var(--radius-sm); font-size: .88rem; font-weight: 500; color: var(--gray-600); background: var(--gray-50); transition: all var(--transition); border: 1px solid var(--gray-200); }
     .profile-contact-link:hover { background: rgba(63,175,158,.08); border-color: var(--emerald); color: var(--emerald-dark); }
-
-    /* Bio content */
     .bio-section { margin-bottom: 48px; }
-    .bio-section h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--gray-100);
-    }
+    .bio-section h2 { font-size: 1.35rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-100); }
     .bio-section h2 span { color: var(--emerald); }
-
-    .bio-text {
-      font-size: .97rem;
-      color: var(--gray-600);
-      line-height: 1.75;
-      margin-bottom: 14px;
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .expertise-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 16px;
-      background: var(--gray-50);
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--gray-200);
-    }
-
-    .expertise-icon {
-      width: 38px; height: 38px;
-      background: rgba(63,175,158,.12);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .expertise-name {
-      font-size: .9rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 3px;
-    }
-
-    .expertise-desc {
-      font-size: .8rem;
-      color: var(--gray-400);
-    }
-
-    .timeline {
-      position: relative;
-      padding-left: 28px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px; top: 8px; bottom: 8px;
-      width: 2px;
-      background: var(--gray-200);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 28px;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -24px; top: 6px;
-      width: 12px; height: 12px;
-      border-radius: 50%;
-      background: var(--emerald);
-      border: 2px solid var(--white);
-      box-shadow: 0 0 0 2px var(--emerald);
-    }
-
-    .timeline-date {
-      font-size: .78rem;
-      font-weight: 700;
-      color: var(--emerald-dark);
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      margin-bottom: 4px;
-    }
-
-    .timeline-title {
-      font-size: .97rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .timeline-company {
-      font-size: .85rem;
-      color: var(--gray-400);
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .value-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 24px;
-      text-align: center;
-      transition: all var(--transition);
-    }
-    .value-card:hover {
-      border-color: var(--emerald);
-      box-shadow: var(--shadow);
-      transform: translateY(-3px);
-    }
+    .bio-text { font-size: .97rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 14px; }
+    .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+    .expertise-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: var(--gray-50); border-radius: var(--radius-sm); border: 1px solid var(--gray-200); }
+    .expertise-icon { width: 38px; height: 38px; background: rgba(63,175,158,.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .expertise-name { font-size: .9rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .expertise-desc { font-size: .8rem; color: var(--gray-400); }
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--gray-200); }
+    .timeline-item { position: relative; margin-bottom: 28px; }
+    .timeline-item::before { content: ''; position: absolute; left: -24px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--emerald); border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--emerald); }
+    .timeline-date { font-size: .78rem; font-weight: 700; color: var(--emerald-dark); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+    .timeline-title { font-size: .97rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .timeline-company { font-size: .85rem; color: var(--gray-400); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+    .value-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px; text-align: center; transition: all var(--transition); }
+    .value-card:hover { border-color: var(--emerald); box-shadow: var(--shadow); transform: translateY(-3px); }
     .value-icon { font-size: 2rem; margin-bottom: 12px; }
     .value-title { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
     .value-desc { font-size: .83rem; color: var(--gray-600); line-height: 1.55; }
 
-    @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .profile-card { position: static; }
-      .expertise-grid { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 580px) {
-      .values-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .profile-card { position: static; } .expertise-grid { grid-template-columns: 1fr; } .values-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .values-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
-<body>
+<body data-page="about">
 
 <nav class="navbar">
   <div class="container">
@@ -291,28 +67,40 @@
         <span class="logo-text">Flissi<span>Digital</span></span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="products.html">Produits</a></li>
-        <li><a href="about.html">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Produits</a></li>
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
-      <a href="products.html" class="btn btn-primary btn-sm nav-cta">Voir les templates</a>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a href="products.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.cta">Voir les templates</a>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+      </div>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-menu">
-      <a href="index.html">Accueil</a>
-      <a href="products.html">Produits</a>
-      <a href="about.html">À propos</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="products.html" data-i18n="nav.products">Produits</a>
+      <a href="about.html" data-i18n="nav.about">À propos</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switcher" style="padding:8px 0">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="ar">عربي</button>
+      </div>
     </div>
   </div>
 </nav>
 
 <div class="page-hero">
   <div class="container">
-    <span class="badge">À propos</span>
-    <h1>Derrière FlissiDigital</h1>
-    <p>Un expert de terrain qui transforme son expérience en outils concrets pour les professionnels.</p>
+    <span class="badge" data-i18n="about.hero.badge">À propos</span>
+    <h1 data-i18n="about.hero.title">Derrière FlissiDigital</h1>
+    <p data-i18n="about.hero.desc">Un expert de terrain qui transforme son expérience en outils concrets pour les professionnels.</p>
   </div>
 </div>
 
@@ -320,13 +108,11 @@
   <div class="container">
     <div class="about-grid">
 
-      <!-- Sidebar Profile -->
       <div>
         <div class="profile-card">
           <div class="profile-avatar">MF</div>
           <div class="profile-name">Mourad Flissi</div>
-          <div class="profile-title">Expert Audit & Finance · Fondateur</div>
-
+          <div class="profile-title" data-i18n="about.profile.title">Expert Audit & Finance · Fondateur</div>
           <div class="profile-tags">
             <span class="profile-tag">Audit interne</span>
             <span class="profile-tag">Contrôle de gestion</span>
@@ -334,149 +120,98 @@
             <span class="profile-tag">Logistique</span>
             <span class="profile-tag">Excel Expert</span>
           </div>
-
           <div class="profile-stats">
-            <div class="profile-stat">
-              <div class="profile-stat-num">10+</div>
-              <div class="profile-stat-label">Ans d'expérience</div>
-            </div>
-            <div class="profile-stat">
-              <div class="profile-stat-num">15+</div>
-              <div class="profile-stat-label">Templates créés</div>
-            </div>
-            <div class="profile-stat">
-              <div class="profile-stat-num">3</div>
-              <div class="profile-stat-label">Domaines clés</div>
-            </div>
-            <div class="profile-stat">
-              <div class="profile-stat-num">100%</div>
-              <div class="profile-stat-label">Satisfaction</div>
-            </div>
+            <div class="profile-stat"><div class="profile-stat-num">10+</div><div class="profile-stat-label" data-i18n="about.profile.stat1">Ans d'expérience</div></div>
+            <div class="profile-stat"><div class="profile-stat-num">15+</div><div class="profile-stat-label" data-i18n="about.profile.stat2">Templates créés</div></div>
+            <div class="profile-stat"><div class="profile-stat-num">3</div><div class="profile-stat-label" data-i18n="about.profile.stat3">Domaines clés</div></div>
+            <div class="profile-stat"><div class="profile-stat-num">100%</div><div class="profile-stat-label" data-i18n="about.profile.stat4">Satisfaction</div></div>
           </div>
-
           <div class="profile-contact-links">
-            <a href="contact.html" class="profile-contact-link">
-              <span>✉️</span> Envoyer un message
-            </a>
-            <a href="#" class="profile-contact-link" rel="noopener">
-              <span>💼</span> LinkedIn
-            </a>
-            <a href="products.html" class="profile-contact-link">
-              <span>📦</span> Voir mes templates
-            </a>
+            <a href="contact.html" class="profile-contact-link"><span>✉️</span><span data-i18n="about.profile.l1">Envoyer un message</span></a>
+            <a href="#" class="profile-contact-link" rel="noopener"><span>💼</span><span data-i18n="about.profile.l2">LinkedIn</span></a>
+            <a href="products.html" class="profile-contact-link"><span>📦</span><span data-i18n="about.profile.l3">Voir mes templates</span></a>
           </div>
         </div>
       </div>
 
-      <!-- Bio Content -->
       <div>
         <div class="bio-section">
-          <h2>Qui suis-je <span>?</span></h2>
-          <p class="bio-text">
-            Je m'appelle <strong>Mourad Flissi</strong>, professionnel de l'audit interne et du contrôle financier avec plus de 10 ans d'expérience dans des environnements exigeants — industrie, services et transport.
-          </p>
-          <p class="bio-text">
-            Tout au long de ma carrière, j'ai constaté que les équipes finance, risques et opérations passent un temps considérable à (re)créer des outils de pilotage dans Excel. Des tableaux de bord improvisés, des registres de risques non structurés, des suivis budgétaires sans cohérence.
-          </p>
-          <p class="bio-text">
-            J'ai donc décidé de capitaliser sur mon expérience pour créer <strong>FlissiDigital</strong> : une boutique de templates Excel professionnels, rigoureux et directement opérationnels. Chaque outil est conçu pour répondre à des besoins réels, testés sur le terrain.
-          </p>
+          <h2><span data-i18n="about.bio.h1">Qui suis-je ?</span></h2>
+          <p class="bio-text" data-i18n-html="about.bio.p1">Je m'appelle <strong>Mourad Flissi</strong>, professionnel de l'audit interne et du contrôle financier avec plus de 10 ans d'expérience dans des environnements exigeants — industrie, services et transport.</p>
+          <p class="bio-text" data-i18n="about.bio.p2">Tout au long de ma carrière, j'ai constaté que les équipes finance, risques et opérations passent un temps considérable à (re)créer des outils de pilotage dans Excel.</p>
+          <p class="bio-text" data-i18n-html="about.bio.p3">J'ai donc décidé de capitaliser sur mon expérience pour créer <strong>FlissiDigital</strong> : une boutique de templates Excel professionnels, rigoureux et directement opérationnels.</p>
         </div>
 
         <div class="bio-section">
-          <h2>Mes domaines d'<span>expertise</span></h2>
+          <h2><span data-i18n="about.exp.h">Mes domaines d'expertise</span></h2>
           <div class="expertise-grid">
             <div class="expertise-item">
               <div class="expertise-icon">🛡️</div>
-              <div>
-                <div class="expertise-name">Gestion des risques</div>
-                <div class="expertise-desc">Cartographie, évaluation, plan de traitement</div>
-              </div>
+              <div><div class="expertise-name" data-i18n="about.exp.1.name">Gestion des risques</div><div class="expertise-desc" data-i18n="about.exp.1.desc">Cartographie, évaluation, plan de traitement</div></div>
             </div>
             <div class="expertise-item">
               <div class="expertise-icon">📊</div>
-              <div>
-                <div class="expertise-name">Contrôle financier</div>
-                <div class="expertise-desc">Budget, reporting, analyse des écarts</div>
-              </div>
+              <div><div class="expertise-name" data-i18n="about.exp.2.name">Contrôle financier</div><div class="expertise-desc" data-i18n="about.exp.2.desc">Budget, reporting, analyse des écarts</div></div>
             </div>
             <div class="expertise-item">
               <div class="expertise-icon">🚛</div>
-              <div>
-                <div class="expertise-name">Transport & logistique</div>
-                <div class="expertise-desc">KPIs transport, stocks, tournées</div>
-              </div>
+              <div><div class="expertise-name" data-i18n="about.exp.3.name">Transport & logistique</div><div class="expertise-desc" data-i18n="about.exp.3.desc">KPIs transport, stocks, tournées</div></div>
             </div>
             <div class="expertise-item">
               <div class="expertise-icon">🔍</div>
-              <div>
-                <div class="expertise-name">Audit interne</div>
-                <div class="expertise-desc">Grilles de contrôle, missions, rapports</div>
-              </div>
+              <div><div class="expertise-name" data-i18n="about.exp.4.name">Audit interne</div><div class="expertise-desc" data-i18n="about.exp.4.desc">Grilles de contrôle, missions, rapports</div></div>
             </div>
           </div>
         </div>
 
         <div class="bio-section">
-          <h2>Mon <span>parcours</span></h2>
+          <h2><span data-i18n="about.timeline.h">Mon parcours</span></h2>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-date">2020 — Présent</div>
-              <div class="timeline-title">Fondateur — FlissiDigital</div>
-              <div class="timeline-company">Création et vente de templates Excel professionnels</div>
+              <div class="timeline-title" data-i18n="about.tl.1.title">Fondateur — FlissiDigital</div>
+              <div class="timeline-company" data-i18n="about.tl.1.co">Création et vente de templates Excel professionnels</div>
             </div>
             <div class="timeline-item">
               <div class="timeline-date">2017 — 2023</div>
-              <div class="timeline-title">Responsable Contrôle Interne & Risques</div>
-              <div class="timeline-company">Groupe industriel — Secteur transport & logistique</div>
+              <div class="timeline-title" data-i18n="about.tl.2.title">Responsable Contrôle Interne & Risques</div>
+              <div class="timeline-company" data-i18n="about.tl.2.co">Groupe industriel — Secteur transport & logistique</div>
             </div>
             <div class="timeline-item">
               <div class="timeline-date">2014 — 2017</div>
-              <div class="timeline-title">Auditeur Financier Senior</div>
-              <div class="timeline-company">Cabinet d'audit — Clientèle PME/ETI</div>
+              <div class="timeline-title" data-i18n="about.tl.3.title">Auditeur Financier Senior</div>
+              <div class="timeline-company" data-i18n="about.tl.3.co">Cabinet d'audit — Clientèle PME/ETI</div>
             </div>
             <div class="timeline-item">
               <div class="timeline-date">2012 — 2014</div>
-              <div class="timeline-title">Contrôleur de Gestion</div>
-              <div class="timeline-company">Entreprise de distribution — Périmètre multi-sites</div>
+              <div class="timeline-title" data-i18n="about.tl.4.title">Contrôleur de Gestion</div>
+              <div class="timeline-company" data-i18n="about.tl.4.co">Entreprise de distribution — Périmètre multi-sites</div>
             </div>
           </div>
         </div>
 
         <div class="bio-section">
-          <h2>Mes <span>valeurs</span></h2>
+          <h2><span data-i18n="about.values.h">Mes valeurs</span></h2>
           <div class="values-grid">
-            <div class="value-card">
-              <div class="value-icon">🎯</div>
-              <div class="value-title">Rigueur</div>
-              <p class="value-desc">Chaque formule est testée, chaque structure validée par des années de pratique terrain.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">💡</div>
-              <div class="value-title">Praticité</div>
-              <p class="value-desc">Des outils qu'on ouvre et utilise immédiatement, sans formation ni paramétrage complexe.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">🤝</div>
-              <div class="value-title">Accessibilité</div>
-              <p class="value-desc">Des prix justes pour que chaque professionnel, quelle que soit sa structure, puisse s'équiper.</p>
-            </div>
+            <div class="value-card"><div class="value-icon">🎯</div><div class="value-title" data-i18n="about.val.1.title">Rigueur</div><p class="value-desc" data-i18n="about.val.1.desc">Chaque formule est testée, chaque structure validée par des années de pratique terrain.</p></div>
+            <div class="value-card"><div class="value-icon">💡</div><div class="value-title" data-i18n="about.val.2.title">Praticité</div><p class="value-desc" data-i18n="about.val.2.desc">Des outils qu'on ouvre et utilise immédiatement, sans formation ni paramétrage complexe.</p></div>
+            <div class="value-card"><div class="value-icon">🤝</div><div class="value-title" data-i18n="about.val.3.title">Accessibilité</div><p class="value-desc" data-i18n="about.val.3.desc">Des prix justes pour que chaque professionnel, quelle que soit sa structure, puisse s'équiper.</p></div>
           </div>
         </div>
-
       </div>
+
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="container">
-    <span class="badge" style="background:rgba(63,175,158,.2);color:#5cc4b3;border:1px solid rgba(63,175,158,.3)">Travaillons ensemble</span>
-    <h2 class="cta-title">Un projet sur mesure ?<br>Parlons-en.</h2>
-    <p class="cta-desc">Je peux développer des outils Excel adaptés à votre contexte spécifique. Audit, finance, logistique — contactez-moi pour discuter de votre besoin.</p>
+    <span class="badge" style="background:rgba(63,175,158,.2);color:#5cc4b3;border:1px solid rgba(63,175,158,.3)" data-i18n="about.cta.badge">Travaillons ensemble</span>
+    <h2 class="cta-title" data-i18n-html="about.cta.title">Un projet sur mesure ?<br>Parlons-en.</h2>
+    <p class="cta-desc" data-i18n="about.cta.desc">Je peux développer des outils Excel adaptés à votre contexte spécifique. Audit, finance, logistique — contactez-moi.</p>
     <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">Me contacter</a>
-      <a href="products.html" class="btn btn-outline">Voir les templates</a>
+      <a href="contact.html" class="btn btn-primary" data-i18n="about.cta.btn1">Me contacter</a>
+      <a href="products.html" class="btn btn-outline" data-i18n="about.cta.btn2">Voir les templates</a>
     </div>
   </div>
 </section>
@@ -485,50 +220,44 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="color:white">
-          <div class="logo-icon">F</div>
-          <span class="logo-text">Flissi<span>Digital</span></span>
-        </a>
-        <p>Templates Excel professionnels conçus par un expert en audit et finance.</p>
-        <div class="footer-social">
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">𝕏</a>
-          <a href="#" class="social-btn">G</a>
-        </div>
+        <a href="index.html" class="nav-logo" style="color:white"><div class="logo-icon">F</div><span class="logo-text">Flissi<span>Digital</span></span></a>
+        <p data-i18n="footer.desc">Templates Excel professionnels conçus par un expert en audit et finance.</p>
+        <div class="footer-social"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">G</a></div>
       </div>
       <div>
-        <div class="footer-title">Navigation</div>
+        <div class="footer-title" data-i18n="footer.col.nav">Navigation</div>
         <ul class="footer-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="products.html">Produits</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Produits</a></li>
+          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-title">Produits</div>
+        <div class="footer-title" data-i18n="footer.col.prod">Produits</div>
         <ul class="footer-links">
-          <li><a href="products.html#risk">Gestion des risques</a></li>
-          <li><a href="products.html#finance">Contrôle financier</a></li>
-          <li><a href="products.html#logistics">Transport & logistique</a></li>
+          <li><a href="products.html#risk" data-i18n="footer.prod.risk">Gestion des risques</a></li>
+          <li><a href="products.html#finance" data-i18n="footer.prod.fin">Contrôle financier</a></li>
+          <li><a href="products.html#logistics" data-i18n="footer.prod.log">Transport & logistique</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-title">Acheter</div>
+        <div class="footer-title" data-i18n="footer.col.buy">Acheter</div>
         <ul class="footer-links">
           <li><a href="#">Gumroad</a></li>
           <li><a href="#">Payhip</a></li>
-          <li><a href="contact.html">Support</a></li>
+          <li><a href="contact.html" data-i18n="footer.support">Support</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.</span>
-      <div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">CGV</a></div>
+      <span data-i18n="footer.copy">© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px"><a href="#" data-i18n="footer.legal">Mentions légales</a><a href="#" data-i18n="footer.cgv">CGV</a></div>
     </div>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/translations.js"></script>
 </body>
 </html>
