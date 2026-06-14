@@ -1124,3 +1124,32 @@ ul { list-style: none; }
   [dir="rtl"] .section-header { text-align: center; }
   [dir="rtl"] .section-subtitle { margin: 12px auto 0; }
 }
+
+/* ── Language detection banner ── */
+.lang-banner {
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  z-index: 999;
+  background: var(--emerald);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 24px;
+  font-size: .9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(63,175,158,.3);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.banner-hiding { opacity: 0; transform: translateY(-100%); }
+.lang-banner-close {
+  background: rgba(255,255,255,.2);
+  border: none; color: white;
+  width: 22px; height: 22px;
+  border-radius: 50%; cursor: pointer;
+  font-size: 1rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.lang-banner-close:hover { background: rgba(255,255,255,.35); }
+[dir="rtl"] .lang-banner { direction: rtl; }

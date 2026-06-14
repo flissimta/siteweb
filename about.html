@@ -77,6 +77,8 @@
         <div class="lang-switcher">
           <button class="lang-btn active" data-lang="fr">FR</button>
           <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <span class="lang-sep">|</span>
           <button class="lang-btn" data-lang="ar">عربي</button>
         </div>
       </div>
@@ -90,11 +92,19 @@
       <div class="lang-switcher" style="padding:8px 0">
         <button class="lang-btn active" data-lang="fr">FR</button>
         <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
         <button class="lang-btn" data-lang="ar">عربي</button>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- LANGUAGE BANNER -->
+<div id="lang-banner" class="lang-banner" style="display:none">
+  <span id="lang-banner-text"></span>
+  <button id="lang-banner-close" class="lang-banner-close">×</button>
+</div>
 
 <div class="page-hero">
   <div class="container">
@@ -258,6 +268,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

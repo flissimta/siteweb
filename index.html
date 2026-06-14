@@ -36,6 +36,8 @@
         <div class="lang-switcher">
           <button class="lang-btn active" data-lang="fr">FR</button>
           <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <span class="lang-sep">|</span>
           <button class="lang-btn" data-lang="ar">عربي</button>
         </div>
       </div>
@@ -53,11 +55,19 @@
       <div class="lang-switcher" style="padding:8px 0">
         <button class="lang-btn active" data-lang="fr">FR</button>
         <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
         <button class="lang-btn" data-lang="ar">عربي</button>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- LANGUAGE BANNER -->
+<div id="lang-banner" class="lang-banner" style="display:none">
+  <span id="lang-banner-text"></span>
+  <button id="lang-banner-close" class="lang-banner-close">×</button>
+</div>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -87,7 +97,7 @@
 
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-number">15+</div>
+            <div class="stat-number">9</div>
             <div class="stat-label" data-i18n="hero.stat1">Templates disponibles</div>
           </div>
           <div class="stat-item">
@@ -171,7 +181,7 @@
   <div class="container">
     <div class="trust-inner">
       <div class="trust-item">
-        <div class="trust-number">15+</div>
+        <div class="trust-number">9</div>
         <div class="trust-label" data-i18n="trust.1">Templates disponibles</div>
       </div>
       <div class="trust-divider"></div>
@@ -181,12 +191,12 @@
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <div class="trust-number">10+</div>
+        <div class="trust-number">20+</div>
         <div class="trust-label" data-i18n="trust.3">Ans d'expérience</div>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <div class="trust-number">100%</div>
+        <div class="trust-number">500+</div>
         <div class="trust-label" data-i18n="trust.4">Excel — sans abonnement</div>
       </div>
     </div>
@@ -435,6 +445,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>
