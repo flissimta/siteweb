@@ -1,5 +1,5 @@
 /**
- * FlissiDigital — i18n engine (FR / EN / AR)
+ * XLDashboard — i18n engine (FR / EN / AR)
  * Supersedes translations.js
  */
 
@@ -22,10 +22,10 @@ const FRENCH_COUNTRIES = new Set([
 const T = {
   fr: {
     /* ── META ── */
-    'meta.title.index':    'FlissiDigital — Templates Excel Professionnels',
-    'meta.title.products': 'Produits — FlissiDigital',
-    'meta.title.about':    'À propos — FlissiDigital',
-    'meta.title.contact':  'Contact — FlissiDigital',
+    'meta.title.index':    'XLDashboard — Templates Excel Professionnels',
+    'meta.title.products': 'Produits — XLDashboard',
+    'meta.title.about':    'À propos — XLDashboard',
+    'meta.title.contact':  'Contact — XLDashboard',
 
     /* ── NAVBAR ── */
     'nav.home':        'Accueil',
@@ -51,12 +51,12 @@ const T = {
     'footer.legal':     'Mentions légales',
     'footer.cgv':       'CGV',
     'footer.privacy':   'Politique de confidentialité',
-    'footer.copy':      '© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.',
+    'footer.copy':      '© 2024 XLDashboard — Mourad Flissi. Tous droits réservés.',
 
     /* ── HERO ── */
     'hero.eyebrow': 'Templates Excel Pro',
     'hero.title':   'Des outils Excel pour<br><span class="highlight">piloter votre activité</span><br>avec précision',
-    'hero.desc':    "FlissiDigital crée des templates Excel professionnels clé en main, conçus par un expert en audit et finance. Téléchargement immédiat — prêts à l'emploi.",
+    'hero.desc':    "XLDashboard crée des templates Excel professionnels clé en main, conçus par un expert en audit et finance. Téléchargement immédiat — prêts à l'emploi.",
     'hero.btn1':    'Découvrir les templates',
     'hero.btn2':    'En savoir plus',
     'hero.stat1':   'Templates professionnels',
@@ -84,7 +84,7 @@ const T = {
     'trust.4': 'Professionnels accompagnés',
 
     /* ── FEATURES ── */
-    'feat.badge':    'Pourquoi FlissiDigital ?',
+    'feat.badge':    'Pourquoi XLDashboard ?',
     'feat.title':    'Conçu par un professionnel,<br>pour des professionnels',
     'feat.subtitle': "Chaque template est le fruit d'une expérience terrain en audit, finance et gestion opérationnelle.",
     'feat.1.title':  "Prêt à l'emploi immédiatement",
@@ -132,7 +132,7 @@ const T = {
     /* ── TESTIMONIALS ── */
     'testi.badge':    'Témoignages',
     'testi.title':    'Ce que disent nos clients',
-    'testi.subtitle': 'Des professionnels qui ont transformé leur façon de travailler grâce aux templates FlissiDigital.',
+    'testi.subtitle': 'Des professionnels qui ont transformé leur façon de travailler grâce aux templates XLDashboard.',
     'testi.1.text':   "Le registre des risques m'a fait gagner plusieurs heures par semaine. La structure est parfaite pour mes reportings mensuels au comité de direction.",
     'testi.1.role':   'Risk Manager — Secteur bancaire',
     'testi.2.text':   "Exactement ce dont j'avais besoin pour mes clients PME. Le template budgétaire est clair, bien structuré et vraiment opérationnel dès la première utilisation.",
@@ -228,7 +228,7 @@ const T = {
 
     /* ── ABOUT PAGE ── */
     'about.hero.badge':  'À propos',
-    'about.hero.title':  'Derrière FlissiDigital',
+    'about.hero.title':  'Derrière XLDashboard',
     'about.hero.desc':   'Un expert de terrain qui transforme son expérience en outils concrets pour les professionnels.',
     'about.profile.title': 'Expert Audit & Finance · Fondateur',
     'about.profile.stat1': "Ans d'expérience",
@@ -241,7 +241,7 @@ const T = {
     'about.bio.h1':      'Qui suis-je ?',
     'about.bio.p1':      "Je m'appelle <strong>Mourad Flissi</strong>, professionnel de l'audit interne et du contrôle financier avec plus de 10 ans d'expérience dans des environnements exigeants — industrie, services et transport.",
     'about.bio.p2':      "Tout au long de ma carrière, j'ai constaté que les équipes finance, risques et opérations passent un temps considérable à (re)créer des outils de pilotage dans Excel.",
-    'about.bio.p3':      "J'ai donc décidé de capitaliser sur mon expérience pour créer <strong>FlissiDigital</strong> : une boutique de templates Excel professionnels, rigoureux et directement opérationnels.",
+    'about.bio.p3':      "J'ai donc décidé de capitaliser sur mon expérience pour créer <strong>XLDashboard</strong> : une boutique de templates Excel professionnels, rigoureux et directement opérationnels.",
     'about.exp.h':       "Mes domaines d'expertise",
     'about.exp.1.name':  'Gestion des risques',
     'about.exp.1.desc':  'Cartographie, évaluation, plan de traitement',
@@ -252,7 +252,7 @@ const T = {
     'about.exp.4.name':  'Audit interne',
     'about.exp.4.desc':  'Grilles de contrôle, missions, rapports',
     'about.timeline.h':  'Mon parcours',
-    'about.tl.1.title':  'Fondateur — FlissiDigital',
+    'about.tl.1.title':  'Fondateur — XLDashboard',
     'about.tl.1.co':     'Création et vente de templates Excel professionnels',
     'about.tl.2.title':  'Responsable Contrôle Interne & Risques',
     'about.tl.2.co':     'Groupe industriel — Secteur transport & logistique',
@@ -322,10 +322,10 @@ const T = {
   // ═══════════════════════════════════════════════════════════════════════════
   en: {
     /* ── META ── */
-    'meta.title.index':    'FlissiDigital — Professional Excel Templates',
-    'meta.title.products': 'Products — FlissiDigital',
-    'meta.title.about':    'About — FlissiDigital',
-    'meta.title.contact':  'Contact — FlissiDigital',
+    'meta.title.index':    'XLDashboard — Professional Excel Templates',
+    'meta.title.products': 'Products — XLDashboard',
+    'meta.title.about':    'About — XLDashboard',
+    'meta.title.contact':  'Contact — XLDashboard',
 
     /* ── NAVBAR ── */
     'nav.home':        'Home',
@@ -351,12 +351,12 @@ const T = {
     'footer.legal':     'Legal Notice',
     'footer.cgv':       'Terms of Sale',
     'footer.privacy':   'Privacy Policy',
-    'footer.copy':      '© 2024 FlissiDigital — Mourad Flissi. All rights reserved.',
+    'footer.copy':      '© 2024 XLDashboard — Mourad Flissi. All rights reserved.',
 
     /* ── HERO ── */
     'hero.eyebrow': 'Professional Excel Templates',
     'hero.title':   'Excel Tools to Drive<br><span class="highlight">Your Business</span><br>with Precision',
-    'hero.desc':    'FlissiDigital creates professional Excel templates, designed by an audit and finance expert. Instant download — ready to use.',
+    'hero.desc':    'XLDashboard creates professional Excel templates, designed by an audit and finance expert. Instant download — ready to use.',
     'hero.btn1':    'Discover Templates',
     'hero.btn2':    'Learn More',
     'hero.stat1':   'Professional Templates',
@@ -384,7 +384,7 @@ const T = {
     'trust.4': 'Satisfied Professionals',
 
     /* ── FEATURES ── */
-    'feat.badge':    'Why FlissiDigital?',
+    'feat.badge':    'Why XLDashboard?',
     'feat.title':    'Built by a Professional,<br>for Professionals',
     'feat.subtitle': 'Each template is the result of hands-on experience in audit, finance and operational management.',
     'feat.1.title':  'Ready to Use Immediately',
@@ -432,7 +432,7 @@ const T = {
     /* ── TESTIMONIALS ── */
     'testi.badge':    'Testimonials',
     'testi.title':    'What Our Clients Say',
-    'testi.subtitle': 'Professionals who transformed the way they work with FlissiDigital templates.',
+    'testi.subtitle': 'Professionals who transformed the way they work with XLDashboard templates.',
     'testi.1.text':   'The risk register saved me several hours a week. The structure is perfect for my monthly reports to the board of directors.',
     'testi.1.role':   'Risk Manager — Banking Sector',
     'testi.2.text':   'Exactly what I needed for my SME clients. The budget template is clear, well-structured and truly operational from first use.',
@@ -528,7 +528,7 @@ const T = {
 
     /* ── ABOUT PAGE ── */
     'about.hero.badge':  'About',
-    'about.hero.title':  'Behind FlissiDigital',
+    'about.hero.title':  'Behind XLDashboard',
     'about.hero.desc':   'A field expert who transforms experience into concrete tools for professionals.',
     'about.profile.title': 'Audit & Finance Expert · Founder',
     'about.profile.stat1': 'Years of Experience',
@@ -541,7 +541,7 @@ const T = {
     'about.bio.h1':      'Who Am I?',
     'about.bio.p1':      'My name is <strong>Mourad Flissi</strong>, an internal audit and financial control professional with over 10 years of experience in demanding environments — industry, services and transport.',
     'about.bio.p2':      'Throughout my career, I noticed that finance, risk and operations teams spend considerable time (re)creating management tools in Excel. Improvised dashboards, unstructured risk registers, inconsistent budget tracking.',
-    'about.bio.p3':      'I therefore decided to leverage my experience to create <strong>FlissiDigital</strong>: a shop of professional, rigorous Excel templates that are directly operational. Each tool is designed to meet real needs, tested in the field.',
+    'about.bio.p3':      'I therefore decided to leverage my experience to create <strong>XLDashboard</strong>: a shop of professional, rigorous Excel templates that are directly operational. Each tool is designed to meet real needs, tested in the field.',
     'about.exp.h':       'My Areas of Expertise',
     'about.exp.1.name':  'Risk Management',
     'about.exp.1.desc':  'Mapping, assessment, treatment plan',
@@ -552,7 +552,7 @@ const T = {
     'about.exp.4.name':  'Internal Audit',
     'about.exp.4.desc':  'Control grids, missions, reports',
     'about.timeline.h':  'My Career Path',
-    'about.tl.1.title':  'Founder — FlissiDigital',
+    'about.tl.1.title':  'Founder — XLDashboard',
     'about.tl.1.co':     'Creation and sale of professional Excel templates',
     'about.tl.2.title':  'Head of Internal Control & Risk',
     'about.tl.2.co':     'Industrial group — Transport & logistics sector',
@@ -622,10 +622,10 @@ const T = {
   // ═══════════════════════════════════════════════════════════════════════════
   ar: {
     /* ── META ── */
-    'meta.title.index':    'FlissiDigital — قوالب Excel الاحترافية',
-    'meta.title.products': 'المنتجات — FlissiDigital',
-    'meta.title.about':    'من نحن — FlissiDigital',
-    'meta.title.contact':  'اتصل بنا — FlissiDigital',
+    'meta.title.index':    'XLDashboard — قوالب Excel الاحترافية',
+    'meta.title.products': 'المنتجات — XLDashboard',
+    'meta.title.about':    'من نحن — XLDashboard',
+    'meta.title.contact':  'اتصل بنا — XLDashboard',
 
     /* ── NAVBAR ── */
     'nav.home':        'الرئيسية',
@@ -651,12 +651,12 @@ const T = {
     'footer.legal':     'الشروط القانونية',
     'footer.cgv':       'شروط البيع',
     'footer.privacy':   'سياسة الخصوصية',
-    'footer.copy':      '© 2024 FlissiDigital — موراد فليسي. جميع الحقوق محفوظة.',
+    'footer.copy':      '© 2024 XLDashboard — موراد فليسي. جميع الحقوق محفوظة.',
 
     /* ── HERO ── */
     'hero.eyebrow': 'قوالب Excel احترافية',
     'hero.title':   'أدوات Excel لقيادة<br><span class="highlight">أعمالك</span><br>بدقة احترافية',
-    'hero.desc':    'تُنشئ FlissiDigital قوالب Excel احترافية، صمّمها خبير في التدقيق والمالية. تحميل فوري — جاهزة للاستخدام فوراً.',
+    'hero.desc':    'تُنشئ XLDashboard قوالب Excel احترافية، صمّمها خبير في التدقيق والمالية. تحميل فوري — جاهزة للاستخدام فوراً.',
     'hero.btn1':    'اكتشف القوالب',
     'hero.btn2':    'اعرف المزيد',
     'hero.stat1':   'قالب احترافي',
@@ -684,7 +684,7 @@ const T = {
     'trust.4': 'متخصص مُستفيد',
 
     /* ── FEATURES ── */
-    'feat.badge':    'لماذا FlissiDigital؟',
+    'feat.badge':    'لماذا XLDashboard؟',
     'feat.title':    'صُمّمت من قِبَل محترف،<br>للمحترفين',
     'feat.subtitle': 'كل قالب هو نتاج خبرة ميدانية في التدقيق والمالية والإدارة التشغيلية.',
     'feat.1.title':  'جاهز للاستخدام فوراً',
@@ -732,7 +732,7 @@ const T = {
     /* ── TESTIMONIALS ── */
     'testi.badge':    'آراء العملاء',
     'testi.title':    'ماذا يقول عملاؤنا',
-    'testi.subtitle': 'محترفون غيّروا طريقة عملهم بفضل قوالب FlissiDigital.',
+    'testi.subtitle': 'محترفون غيّروا طريقة عملهم بفضل قوالب XLDashboard.',
     'testi.1.text':   'سجل المخاطر وفّر لي عدة ساعات في الأسبوع. الهيكل مثالي لتقاريري الشهرية أمام لجنة الإدارة.',
     'testi.1.role':   'مدير المخاطر — القطاع المصرفي',
     'testi.2.text':   'بالضبط ما كنت أحتاجه لعملائي من المؤسسات الصغيرة والمتوسطة. قالب الميزانية واضح ومنظم وعملي منذ الاستخدام الأول.',
@@ -828,7 +828,7 @@ const T = {
 
     /* ── ABOUT PAGE ── */
     'about.hero.badge':  'من نحن',
-    'about.hero.title':  'خلف FlissiDigital',
+    'about.hero.title':  'خلف XLDashboard',
     'about.hero.desc':   'خبير ميداني يحوّل تجربته إلى أدوات ملموسة للمحترفين.',
     'about.profile.title': 'خبير التدقيق والمالية · المؤسس',
     'about.profile.stat1': 'سنوات خبرة',
@@ -841,7 +841,7 @@ const T = {
     'about.bio.h1':      'من أنا؟',
     'about.bio.p1':      'اسمي <strong>موراد فليسي</strong>، متخصص في التدقيق الداخلي والرقابة المالية بخبرة تتجاوز 10 سنوات في بيئات متطلبة — الصناعة والخدمات والنقل.',
     'about.bio.p2':      'على مدار مسيرتي، لاحظت أن فرق المالية والمخاطر والعمليات تقضي وقتاً طويلاً في (إعادة) إنشاء أدوات قيادة في Excel. لوحات تحكم مرتجلة وسجلات مخاطر غير منظمة ومتابعات ميزانية متضاربة.',
-    'about.bio.p3':      'لذا قررت الاستفادة من خبرتي لإنشاء <strong>FlissiDigital</strong>: متجر قوالب Excel احترافية صارمة وجاهزة للعمل مباشرة. كل أداة مصممة لتلبية احتياجات حقيقية ومُختبرة ميدانياً.',
+    'about.bio.p3':      'لذا قررت الاستفادة من خبرتي لإنشاء <strong>XLDashboard</strong>: متجر قوالب Excel احترافية صارمة وجاهزة للعمل مباشرة. كل أداة مصممة لتلبية احتياجات حقيقية ومُختبرة ميدانياً.',
     'about.exp.h':       'مجالات خبرتي',
     'about.exp.1.name':  'إدارة المخاطر',
     'about.exp.1.desc':  'رسم الخرائط، التقييم، خطة المعالجة',
@@ -852,7 +852,7 @@ const T = {
     'about.exp.4.name':  'التدقيق الداخلي',
     'about.exp.4.desc':  'شبكات الضبط، المهام، التقارير',
     'about.timeline.h':  'مساري المهني',
-    'about.tl.1.title':  'المؤسس — FlissiDigital',
+    'about.tl.1.title':  'المؤسس — XLDashboard',
     'about.tl.1.co':     'إنشاء وبيع قوالب Excel الاحترافية',
     'about.tl.2.title':  'مسؤول الرقابة الداخلية والمخاطر',
     'about.tl.2.co':     'مجموعة صناعية — قطاع النقل والخدمات اللوجستية',
