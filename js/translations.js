@@ -24,7 +24,7 @@ const TRANSLATIONS = {
     'footer.legal':     'Mentions légales',
     'footer.cgv':       'CGV',
     'footer.privacy':   'Politique de confidentialité',
-    'footer.copy':      '© 2024 FlissiDigital — Mourad Flissi. Tous droits réservés.',
+    'footer.copy':      '© 2024 FlissiDigital — XLDashboard. Tous droits réservés.',
 
     /* ── INDEX — HERO ── */
     'hero.eyebrow': 'Templates Excel Pro',
@@ -65,7 +65,7 @@ const TRANSLATIONS = {
     'feat.2.title':  'Entièrement personnalisable',
     'feat.2.desc':   'Aucune macro complexe cachée. Vos données, vos couleurs, votre logo. Adaptez librement chaque outil à votre contexte métier.',
     'feat.3.title':  'Expertise audit & finance',
-    'feat.3.desc':   'Conçus par Mourad Flissi, professionnel de l\'audit et du contrôle financier. Chaque formule et structure respecte les bonnes pratiques sectorielles.',
+    'feat.3.desc':   'Conçus par XLDashboard, professionnel de l\'audit et du contrôle financier. Chaque formule et structure respecte les bonnes pratiques sectorielles.',
     'feat.4.title':  'Compatible tous supports',
     'feat.4.desc':   'Optimisé pour Excel 2016 et versions ultérieures, ainsi que Microsoft 365. Fonctionne sur PC, Mac et tablette.',
     'feat.5.title':  'Achat unique, à vie',
@@ -216,7 +216,7 @@ const TRANSLATIONS = {
     'about.profile.l2':  'LinkedIn',
     'about.profile.l3':  'Voir mes templates',
     'about.bio.h1':      'Qui suis-je ?',
-    'about.bio.p1':      'Je m\'appelle <strong>Mourad Flissi</strong>, professionnel de l\'audit interne et du contrôle financier avec plus de 10 ans d\'expérience dans des environnements exigeants — industrie, services et transport.',
+    'about.bio.p1':      'Je m\'appelle <strong>XLDashboard</strong>, professionnel de l\'audit interne et du contrôle financier avec plus de 10 ans d\'expérience dans des environnements exigeants — industrie, services et transport.',
     'about.bio.p2':      'Tout au long de ma carrière, j\'ai constaté que les équipes finance, risques et opérations passent un temps considérable à (re)créer des outils de pilotage dans Excel. Des tableaux de bord improvisés, des registres de risques non structurés, des suivis budgétaires sans cohérence.',
     'about.bio.p3':      'J\'ai donc décidé de capitaliser sur mon expérience pour créer <strong>FlissiDigital</strong> : une boutique de templates Excel professionnels, rigoureux et directement opérationnels. Chaque outil est conçu pour répondre à des besoins réels, testés sur le terrain.',
     'about.exp.h':       'Mes domaines d\'expertise',
