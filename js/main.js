@@ -1,3 +1,25 @@
+// ─── Source unique de vérité pour les liens d'achat ─────────────────────────
+const LIENS_ACHAT = {
+  erm_toolkit: {
+    gumroad: "https://flissidigital.gumroad.com/l/enterprise-risk-management-dashboard",
+    payhip:  "https://payhip.com/b/sxrmq"
+  },
+  riskmap_pro: {
+    gumroad: "https://flissidigital.gumroad.com/l/cartographiedesrisques",
+    payhip:  null
+  },
+  trucking_cost: {
+    gumroad: "https://flissidigital.gumroad.com/l/trucking-cost-per-mile-calculator",
+    payhip:  "https://payhip.com/b/XxCUq"
+  },
+  micro_entrepreneur: {
+    gumroad: "https://flissidigital.gumroad.com/l/tableau-de-bord-auto-entrepreneur",
+    payhip:  null
+  }
+};
+// Boutique complète (liens de repli footer) :
+// Gumroad : https://flissidigital.gumroad.com/  |  Payhip : https://payhip.com/FlissiDigital
+
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 if (navbar) {

@@ -55,6 +55,17 @@
     [dir="rtl"] .platform-badges { flex-direction: row-reverse; }
     [dir="rtl"] .section-anchor { text-align: right; }
 
+    .product-card.coming-soon { opacity: .62; filter: grayscale(.35); pointer-events: none; }
+    .product-card.coming-soon .product-thumb { filter: grayscale(.5); }
+    .badge-soon {
+      display: inline-block;
+      background: var(--gray-100);
+      color: var(--gray-600);
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .04em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 100px;
+      margin-bottom: 10px;
+    }
     @media (max-width: 1024px) { .products-full-grid { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 640px) { .products-full-grid { grid-template-columns: 1fr; } }
   </style>
@@ -126,56 +137,66 @@
       <button class="filter-btn" data-filter="logistics" data-i18n="ppage.filter.log">🚛 Transport & logistique</button>
     </div>
 
-    <!-- RISQUES -->
+    <!-- ══ RISQUES ══════════════════════════════════════════════════════════ -->
     <div id="risk" class="section-anchor" style="margin-bottom:16px">
       <span class="badge" data-i18n="ppage.risk.badge">Gestion des risques</span>
       <h2 class="section-title" style="margin-bottom:32px" data-i18n="ppage.risk.title">Templates Risques</h2>
     </div>
     <div class="products-full-grid" style="margin-bottom:72px" data-category="risk">
+
+      <!-- r1 — ERM Toolkit ✅ Disponible -->
       <div class="product-card">
         <div class="product-thumb risk"><span class="product-thumb-icon">🛡️</span><span class="product-category" data-i18n="prod.cat.risk">Risques</span></div>
         <div class="product-body">
-          <h3 class="product-title" data-i18n="pp.r1.title">Registre des Risques & Tableau de Bord</h3>
-          <p class="product-desc" data-i18n="pp.r1.desc">Le template complet pour identifier, évaluer, prioriser et suivre tous vos risques opérationnels.</p>
+          <h3 class="product-title" data-i18n="pp.r1.title">Enterprise Risk Management Toolkit</h3>
+          <p class="product-desc" data-i18n="pp.r1.desc">Template ERM complet pour identifier, évaluer et surveiller vos risques d'entreprise. Conforme aux standards d'audit interne. Edition anglaise.</p>
           <ul class="product-features">
-            <li class="product-feature" data-i18n="pp.r1.f1">Matrice de criticité 5×5 interactive</li>
-            <li class="product-feature" data-i18n="pp.r1.f2">Scoring automatique (probabilité × impact)</li>
-            <li class="product-feature" data-i18n="pp.r1.f3">Plan d'actions correctives intégré</li>
-            <li class="product-feature" data-i18n="pp.r1.f4">Dashboard KPI avec graphiques</li>
-            <li class="product-feature" data-i18n="pp.r1.f5">Export rapport PDF</li>
+            <li class="product-feature" data-i18n="pp.r1.f1">Registre dynamique des risques (5×5)</li>
+            <li class="product-feature" data-i18n="pp.r1.f2">Score automatique probabilité × impact</li>
+            <li class="product-feature" data-i18n="pp.r1.f3">Plan de traitement des risques intégré</li>
+            <li class="product-feature" data-i18n="pp.r1.f4">Dashboard KPI risques automatisé</li>
+            <li class="product-feature" data-i18n="pp.r1.f5">Indicateurs d'appétit & tolérance au risque</li>
           </ul>
           <div class="product-footer">
-            <div class="product-price">19€ <span data-i18n="prod.price.once">achat unique</span></div>
+            <div class="product-price">15 $ <span data-i18n="prod.price.once">achat unique</span></div>
           </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
+        <div class="platform-badges">
+          <a href="https://flissidigital.gumroad.com/l/enterprise-risk-management-dashboard"
+             class="platform-badge gumroad" target="_blank" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
+          <a href="https://payhip.com/b/sxrmq"
+             class="platform-badge payhip" target="_blank" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
+        </div>
+        <p style="font-size:.75rem;color:var(--gray-400);margin-top:8px">⚠ Page de paiement en anglais</p>
         </div>
       </div>
+
+      <!-- r2 — RiskMap Pro ✅ Disponible -->
       <div class="product-card">
-        <div class="product-thumb risk"><span class="product-thumb-icon">📋</span><span class="product-category" data-i18n="prod.cat.risk">Risques</span></div>
+        <div class="product-thumb risk"><span class="product-thumb-icon">🗺️</span><span class="product-category" data-i18n="prod.cat.risk">Risques</span></div>
         <div class="product-body">
-          <h3 class="product-title" data-i18n="pp.r2.title">Plan de Continuité d'Activité (PCA)</h3>
-          <p class="product-desc" data-i18n="pp.r2.desc">Structurez et documentez votre PCA : analyse d'impact, scénarios de crise et procédures de reprise.</p>
+          <h3 class="product-title" data-i18n="pp.r2.title">RiskMap Pro — Cartographie des risques PME</h3>
+          <p class="product-desc" data-i18n="pp.r2.desc">Cartographie visuelle des risques PME : identifiez, classez et pilotez vos risques opérationnels simplement, sans jargon technique.</p>
           <ul class="product-features">
-            <li class="product-feature" data-i18n="pp.r2.f1">Analyse BIA (Business Impact Analysis)</li>
-            <li class="product-feature" data-i18n="pp.r2.f2">Fiches scénarios de crise</li>
-            <li class="product-feature" data-i18n="pp.r2.f3">Procédures de reprise documentées</li>
-            <li class="product-feature" data-i18n="pp.r2.f4">Calendrier de tests PCA</li>
+            <li class="product-feature" data-i18n="pp.r2.f1">Carte thermique des risques couleur</li>
+            <li class="product-feature" data-i18n="pp.r2.f2">Fiche risque par domaine (5 max)</li>
+            <li class="product-feature" data-i18n="pp.r2.f3">Scoring simplifié probabilité × impact</li>
+            <li class="product-feature" data-i18n="pp.r2.f4">Plan d'action et responsable associé</li>
           </ul>
           <div class="product-footer">
-            <div class="product-price">22€ <span data-i18n="prod.price.once">achat unique</span></div>
+            <div class="product-price">15 $ <span data-i18n="prod.price.once">achat unique</span></div>
           </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
+        <div class="platform-badges">
+          <a href="https://flissidigital.gumroad.com/l/cartographiedesrisques"
+             class="platform-badge gumroad" target="_blank" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
+        </div>
         </div>
       </div>
-      <div class="product-card">
+
+      <!-- r3 — Audit interne 🔜 Bientôt -->
+      <div class="product-card coming-soon">
         <div class="product-thumb risk"><span class="product-thumb-icon">🔍</span><span class="product-category" data-i18n="prod.cat.risk">Risques</span></div>
         <div class="product-body">
+          <span class="badge-soon">🕐 Bientôt disponible</span>
           <h3 class="product-title" data-i18n="pp.r3.title">Audit Interne — Grille d'Évaluation</h3>
           <p class="product-desc" data-i18n="pp.r3.desc">Outillez vos missions d'audit interne avec des grilles de contrôle et un scoring de maturité.</p>
           <ul class="product-features">
@@ -184,26 +205,23 @@
             <li class="product-feature" data-i18n="pp.r3.f3">Fiches observations & recommandations</li>
             <li class="product-feature" data-i18n="pp.r3.f4">Rapport d'audit automatisé</li>
           </ul>
-          <div class="product-footer">
-            <div class="product-price">25€ <span data-i18n="prod.price.once">achat unique</span></div>
-          </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
         </div>
       </div>
+
     </div>
 
-    <!-- FINANCE -->
+    <!-- ══ FINANCE ════════════════════════════════════════════════════════════ -->
     <div id="finance" class="section-anchor" style="margin-bottom:16px">
       <span class="badge" data-i18n="ppage.fin.badge">Contrôle financier</span>
       <h2 class="section-title" style="margin-bottom:32px" data-i18n="ppage.fin.title">Templates Finance</h2>
     </div>
     <div class="products-full-grid" style="margin-bottom:72px" data-category="finance">
-      <div class="product-card">
+
+      <!-- f1 — Suivi budgétaire 🔜 Bientôt -->
+      <div class="product-card coming-soon">
         <div class="product-thumb finance"><span class="product-thumb-icon">📊</span><span class="product-category" data-i18n="prod.cat.fin">Finance</span></div>
         <div class="product-body">
+          <span class="badge-soon">🕐 Bientôt disponible</span>
           <h3 class="product-title" data-i18n="pp.f1.title">Suivi Budgétaire & Contrôle des Écarts</h3>
           <p class="product-desc" data-i18n="pp.f1.desc">Pilotez votre budget mensuel avec une vue comparative Prévu / Réalisé / Écart.</p>
           <ul class="product-features">
@@ -213,38 +231,36 @@
             <li class="product-feature" data-i18n="pp.f1.f4">Synthèse mensuelle et annuelle</li>
             <li class="product-feature" data-i18n="pp.f1.f5">Compatible multi-centres de coûts</li>
           </ul>
-          <div class="product-footer">
-            <div class="product-price">24€ <span data-i18n="prod.price.once">achat unique</span></div>
-          </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
         </div>
       </div>
+
+      <!-- f2 — Micro-Entrepreneur ✅ Disponible -->
       <div class="product-card">
-        <div class="product-thumb finance"><span class="product-thumb-icon">💰</span><span class="product-category" data-i18n="prod.cat.fin">Finance</span></div>
+        <div class="product-thumb finance"><span class="product-thumb-icon">💼</span><span class="product-category" data-i18n="prod.cat.fin">Finance</span></div>
         <div class="product-body">
-          <h3 class="product-title" data-i18n="pp.f2.title">Tableau de Trésorerie Prévisionnelle</h3>
-          <p class="product-desc" data-i18n="pp.f2.desc">Anticipez vos besoins de financement avec un prévisionnel de trésorerie glissant sur 12 mois.</p>
+          <h3 class="product-title" data-i18n="pp.f2.title">Micro-Entrepreneur Dashboard 2026</h3>
+          <p class="product-desc" data-i18n="pp.f2.desc">Tableau de bord complet pour auto-entrepreneurs et micro-entreprises : simulation URSSAF, trésorerie 12 mois et suivi des KPI activité.</p>
           <ul class="product-features">
-            <li class="product-feature" data-i18n="pp.f2.f1">Prévisionnel 12 mois glissants</li>
-            <li class="product-feature" data-i18n="pp.f2.f2">3 scénarios comparatifs</li>
-            <li class="product-feature" data-i18n="pp.f2.f3">Gestion des décalages de paiement</li>
-            <li class="product-feature" data-i18n="pp.f2.f4">Graphique solde cumulé</li>
+            <li class="product-feature" data-i18n="pp.f2.f1">Simulation URSSAF par régime 2026</li>
+            <li class="product-feature" data-i18n="pp.f2.f2">Trésorerie prévisionnelle 12 mois</li>
+            <li class="product-feature" data-i18n="pp.f2.f3">Suivi CA mensuel vs objectif</li>
+            <li class="product-feature" data-i18n="pp.f2.f4">Alertes seuil franchise TVA</li>
           </ul>
           <div class="product-footer">
-            <div class="product-price">22€ <span data-i18n="prod.price.once">achat unique</span></div>
+            <div class="product-price">15 $ <span data-i18n="prod.price.once">achat unique</span></div>
           </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
+        <div class="platform-badges">
+          <a href="https://flissidigital.gumroad.com/l/tableau-de-bord-auto-entrepreneur"
+             class="platform-badge gumroad" target="_blank" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
+        </div>
         </div>
       </div>
-      <div class="product-card">
+
+      <!-- f3 — Reporting mensuel 🔜 Bientôt -->
+      <div class="product-card coming-soon">
         <div class="product-thumb finance"><span class="product-thumb-icon">📈</span><span class="product-category" data-i18n="prod.cat.fin">Finance</span></div>
         <div class="product-body">
+          <span class="badge-soon">🕐 Bientôt disponible</span>
           <h3 class="product-title" data-i18n="pp.f3.title">Reporting Financier Mensuel</h3>
           <p class="product-desc" data-i18n="pp.f3.desc">Générez automatiquement vos reportings mensuels : compte de résultat et indicateurs financiers clés.</p>
           <ul class="product-features">
@@ -253,47 +269,49 @@
             <li class="product-feature" data-i18n="pp.f3.f3">Graphiques pour comité de direction</li>
             <li class="product-feature" data-i18n="pp.f3.f4">Comparaison N / N-1</li>
           </ul>
-          <div class="product-footer">
-            <div class="product-price">26€ <span data-i18n="prod.price.once">achat unique</span></div>
-          </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
         </div>
       </div>
+
     </div>
 
-    <!-- LOGISTIQUE -->
+    <!-- ══ LOGISTIQUE ═════════════════════════════════════════════════════════ -->
     <div id="logistics" class="section-anchor" style="margin-bottom:16px">
       <span class="badge" data-i18n="ppage.log.badge">Transport & logistique</span>
       <h2 class="section-title" style="margin-bottom:32px" data-i18n="ppage.log.title">Templates Logistique</h2>
     </div>
     <div class="products-full-grid" data-category="logistics">
+
+      <!-- l1 — Trucking Cost Simulator ✅ Disponible -->
       <div class="product-card">
         <div class="product-thumb logistics"><span class="product-thumb-icon">🚛</span><span class="product-category" data-i18n="prod.cat.log">Logistique</span></div>
         <div class="product-body">
-          <h3 class="product-title" data-i18n="pp.l1.title">Tableau de Bord Transport & Livraisons</h3>
-          <p class="product-desc" data-i18n="pp.l1.desc">Supervisez tous vos flux transport, suivez vos transporteurs et analysez vos coûts.</p>
+          <h3 class="product-title" data-i18n="pp.l1.title">Trucking Cost Price Simulator</h3>
+          <p class="product-desc" data-i18n="pp.l1.desc">Calculateur de coût de revient au mile pour transporteurs routiers US. Carburant, amortissement, entretien, chauffeur — tout est inclus. Edition anglaise.</p>
           <ul class="product-features">
-            <li class="product-feature" data-i18n="pp.l1.f1">Suivi des livraisons et statuts</li>
-            <li class="product-feature" data-i18n="pp.l1.f2">KPIs transporteurs automatisés</li>
-            <li class="product-feature" data-i18n="pp.l1.f3">Analyse des coûts par route</li>
-            <li class="product-feature" data-i18n="pp.l1.f4">Taux de service et ponctualité</li>
-            <li class="product-feature" data-i18n="pp.l1.f5">Alertes retards configurables</li>
+            <li class="product-feature" data-i18n="pp.l1.f1">Coût par mile / km détaillé</li>
+            <li class="product-feature" data-i18n="pp.l1.f2">Décomposition carburant, fixes, variables</li>
+            <li class="product-feature" data-i18n="pp.l1.f3">Comparaison devis vs coût réel</li>
+            <li class="product-feature" data-i18n="pp.l1.f4">Seuil de rentabilité par trajet</li>
+            <li class="product-feature" data-i18n="pp.l1.f5">Rapport mensuel automatisé</li>
           </ul>
           <div class="product-footer">
-            <div class="product-price">22€ <span data-i18n="prod.price.once">achat unique</span></div>
+            <div class="product-price">15 $ <span data-i18n="prod.price.once">achat unique</span></div>
           </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
+        <div class="platform-badges">
+          <a href="https://flissidigital.gumroad.com/l/trucking-cost-per-mile-calculator"
+             class="platform-badge gumroad" target="_blank" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
+          <a href="https://payhip.com/b/XxCUq"
+             class="platform-badge payhip" target="_blank" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
+        </div>
+        <p style="font-size:.75rem;color:var(--gray-400);margin-top:8px">⚠ Page de paiement en anglais</p>
         </div>
       </div>
-      <div class="product-card">
+
+      <!-- l2 — Gestion stocks 🔜 Bientôt -->
+      <div class="product-card coming-soon">
         <div class="product-thumb logistics"><span class="product-thumb-icon">📦</span><span class="product-category" data-i18n="prod.cat.log">Logistique</span></div>
         <div class="product-body">
+          <span class="badge-soon">🕐 Bientôt disponible</span>
           <h3 class="product-title" data-i18n="pp.l2.title">Gestion des Stocks & Inventaire</h3>
           <p class="product-desc" data-i18n="pp.l2.desc">Gérez votre stock en temps réel : entrées/sorties, valorisation et alertes de réapprovisionnement.</p>
           <ul class="product-features">
@@ -302,18 +320,14 @@
             <li class="product-feature" data-i18n="pp.l2.f3">Alertes stock minimum</li>
             <li class="product-feature" data-i18n="pp.l2.f4">Tableau de bord stock global</li>
           </ul>
-          <div class="product-footer">
-            <div class="product-price">20€ <span data-i18n="prod.price.once">achat unique</span></div>
-          </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
         </div>
       </div>
-      <div class="product-card">
+
+      <!-- l3 — Plan tournées 🔜 Bientôt -->
+      <div class="product-card coming-soon">
         <div class="product-thumb logistics"><span class="product-thumb-icon">🗺️</span><span class="product-category" data-i18n="prod.cat.log">Logistique</span></div>
         <div class="product-body">
+          <span class="badge-soon">🕐 Bientôt disponible</span>
           <h3 class="product-title" data-i18n="pp.l3.title">Plan de Tournées & Optimisation</h3>
           <p class="product-desc" data-i18n="pp.l3.desc">Planifiez et optimisez vos tournées de livraison : affectation, km, coûts et rentabilité.</p>
           <ul class="product-features">
@@ -322,21 +336,13 @@
             <li class="product-feature" data-i18n="pp.l3.f3">Suivi kilométrique et carburant</li>
             <li class="product-feature" data-i18n="pp.l3.f4">Analyse coût par livraison</li>
           </ul>
-          <div class="product-footer">
-            <div class="product-price">21€ <span data-i18n="prod.price.once">achat unique</span></div>
-          </div>
-          <div class="platform-badges">
-            <a href="#" class="platform-badge gumroad" rel="noopener" data-i18n="ppage.buy.gumroad">⬇ Gumroad</a>
-            <a href="#" class="platform-badge payhip" rel="noopener" data-i18n="ppage.buy.payhip">⬇ Payhip</a>
-          </div>
         </div>
       </div>
+
     </div>
 
   </div>
 </section>
-
-<section class="cta-section">
   <div class="container">
     <span class="badge" style="background:rgba(63,175,158,.2);color:#5cc4b3;border:1px solid rgba(63,175,158,.3)" data-i18n="ppage.cta.badge">Besoin spécifique ?</span>
     <h2 class="cta-title" data-i18n="ppage.cta.title">Vous avez un besoin sur mesure ?</h2>
@@ -352,9 +358,15 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="color:white"><div class="logo-icon">F</div><span class="logo-text"><span>XL</span>Dashboard</span></a>
-        <p data-i18n="footer.desc">Templates Excel professionnels conçus par un expert en audit et finance.</p>
-        <div class="footer-social"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">G</a></div>
+        <a href="index.html" class="nav-logo" style="color:white">
+          <div class="logo-icon">F</div>
+          <span class="logo-text"><span>XL</span>Dashboard</span>
+        </a>
+        <p data-i18n="footer.desc">Templates Excel professionnels conçus par un expert en audit et finance pour vous aider à piloter votre activité avec précision.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/mourad-flissi-18089923/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://flissidigital.gumroad.com/" class="social-btn" aria-label="Gumroad" target="_blank" rel="noopener">G</a>
+        </div>
       </div>
       <div>
         <div class="footer-title" data-i18n="footer.col.nav">Navigation</div>
@@ -368,26 +380,32 @@
       <div>
         <div class="footer-title" data-i18n="footer.col.prod">Produits</div>
         <ul class="footer-links">
-          <li><a href="#risk" data-i18n="footer.prod.risk">Gestion des risques</a></li>
-          <li><a href="#finance" data-i18n="footer.prod.fin">Contrôle financier</a></li>
-          <li><a href="#logistics" data-i18n="footer.prod.log">Transport & logistique</a></li>
+          <li><a href="products.html#risk" data-i18n="footer.prod.risk">Gestion des risques</a></li>
+          <li><a href="products.html#finance" data-i18n="footer.prod.fin">Contrôle financier</a></li>
+          <li><a href="products.html#logistics" data-i18n="footer.prod.log">Transport & logistique</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-title" data-i18n="footer.col.buy">Acheter</div>
         <ul class="footer-links">
-          <li><a href="#">Gumroad</a></li>
-          <li><a href="#">Payhip</a></li>
+          <li><a href="https://flissidigital.gumroad.com/" target="_blank" rel="noopener">Gumroad</a></li>
+          <li><a href="https://payhip.com/FlissiDigital" target="_blank" rel="noopener">Payhip</a></li>
           <li><a href="contact.html" data-i18n="footer.support">Support</a></li>
+          <li><a href="contact.html" data-i18n="footer.custom">Devis sur mesure</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-i18n="footer.copy">© 2024 XLDashboard — Mourad Flissi. Tous droits réservés.</span>
-      <div style="display:flex;gap:20px"><a href="#" data-i18n="footer.legal">Mentions légales</a><a href="#" data-i18n="footer.cgv">CGV</a></div>
+      <span data-i18n="footer.copy">© 2025 XLDashboard — Mourad Flissi. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px">
+        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
+        <a href="cgv.html" data-i18n="footer.cgv">CGV</a>
+        <a href="politique-confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a>
+      </div>
     </div>
   </div>
 </footer>
+
 
 <script src="js/main.js"></script>
 <script src="js/i18n.js"></script>
@@ -435,4 +453,3 @@
   </a>
 </div>
 </body>
-</html>
