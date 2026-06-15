@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../XLdashboardStore1.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiskMap Pro — Cartographie des risques PME | XLDashboard</title>
+  <!-- SEO -->
+  <link rel="canonical" href="https://xldashboard.store/templates/riskmap-pro.html" />
+  <meta name="description" content="Cartographie des risques pour PME en Excel : carte thermique couleur, scoring simplifié et plan d'action. Simple et opérationnel. 15$ — téléchargement immédiat." />
+  <meta name="author" content="Mourad Flissi" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="XLDashboard" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="RiskMap Pro — Cartographie des risques PME | XLDashboard" />
+  <meta property="og:description" content="Cartographie des risques pour PME en Excel : carte thermique couleur, scoring simplifié et plan d'action. Simple et opérationnel. 15$ — téléchargement immédiat." />
+  <meta property="og:url" content="https://xldashboard.store/templates/riskmap-pro.html" />
+  <meta property="og:image" content="https://xldashboard.store/assets/og-image.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RiskMap Pro — Cartographie des risques PME | XLDashboard" />
+  <meta name="twitter:description" content="Cartographie des risques pour PME en Excel : carte thermique couleur, scoring simplifié et plan d'action. Simple et opérationnel. 15$ — téléchargement immédiat." />
+  <meta name="twitter:image" content="https://xldashboard.store/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .prod-hero { background: linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 100%); padding:120px 0 64px; position:relative; overflow:hidden; }
+    .prod-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(63,175,158,.14) 0%,transparent 70%); }
+    .prod-hero > * { position:relative; }
+    .prod-hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+    .prod-hero-content h1 { font-size:clamp(1.7rem,3.5vw,2.6rem); font-weight:800; color:var(--white); line-height:1.2; margin-bottom:16px; }
+    .prod-hero-content .hero-desc { font-size:1rem; color:rgba(255,255,255,.72); line-height:1.7; margin-bottom:28px; }
+    .prod-price-box { display:inline-flex; align-items:baseline; gap:6px; background:rgba(63,175,158,.15); border:1px solid rgba(63,175,158,.3); padding:10px 20px; border-radius:var(--radius-sm); margin-bottom:24px; }
+    .prod-price-box .price { font-size:2rem; font-weight:800; color:var(--emerald); }
+    .prod-price-box .once { font-size:.82rem; color:rgba(255,255,255,.55); }
+    .prod-buy-btns { display:flex; gap:12px; flex-wrap:wrap; }
+    .prod-hero-visual { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:28px; min-height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; }
+    .todo-screenshot { border:2px dashed rgba(63,175,158,.35); border-radius:var(--radius-sm); width:100%; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:rgba(255,255,255,.35); font-size:.85rem; background:rgba(63,175,158,.04); }
+    .todo-screenshot svg { opacity:.3; }
+
+    .prod-body { max-width:960px; margin:0 auto; padding:64px 24px 80px; }
+    .prod-section { margin-bottom:56px; }
+    .prod-section h2 { font-size:1.3rem; font-weight:700; color:var(--navy); margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid var(--gray-100); }
+    .prod-section h2 span { color:var(--emerald); }
+    .features-list { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .feature-item { display:flex; align-items:flex-start; gap:12px; padding:14px 16px; background:var(--gray-50); border-radius:var(--radius-sm); border:1px solid var(--gray-200); }
+    .feature-check { width:20px; height:20px; background:var(--emerald); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+    .feature-check svg { width:11px; height:11px; }
+    .feature-text strong { display:block; font-size:.88rem; font-weight:700; color:var(--navy); }
+    .feature-text span { font-size:.82rem; color:var(--gray-600); line-height:1.5; }
+
+    .use-cases { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .use-case { background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius); padding:20px; text-align:center; transition:all var(--transition); }
+    .use-case:hover { border-color:var(--emerald); box-shadow:var(--shadow); transform:translateY(-2px); }
+    .use-case-icon { font-size:1.8rem; margin-bottom:10px; }
+    .use-case-title { font-size:.88rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+    .use-case-desc { font-size:.78rem; color:var(--gray-600); line-height:1.55; }
+
+    .lead-magnet { background:linear-gradient(135deg,var(--navy-dark),var(--navy)); border-radius:var(--radius); padding:40px; text-align:center; margin-bottom:56px; }
+    .lead-magnet h3 { font-size:1.25rem; font-weight:700; color:var(--white); margin-bottom:10px; }
+    .lead-magnet p { font-size:.9rem; color:rgba(255,255,255,.65); margin-bottom:24px; }
+    .lead-form { display:flex; gap:10px; max-width:440px; margin:0 auto; }
+    .lead-form input { flex:1; padding:11px 16px; border-radius:var(--radius-sm); border:none; font-size:.92rem; }
+    .lead-form button { padding:11px 22px; background:var(--emerald); color:white; border:none; border-radius:var(--radius-sm); font-weight:700; cursor:pointer; white-space:nowrap; transition:background var(--transition); }
+    .lead-form button:hover { background:var(--emerald-dark); }
+    .todo-box { background:#fef9c3; border:1px solid #fde047; border-radius:8px; padding:10px 16px; font-size:.8rem; color:#713f12; margin-top:14px; }
+
+    .platform-badges { display:flex; gap:10px; }
+    .platform-badge { display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:100px; font-size:.82rem; font-weight:700; border:1.5px solid; transition:all var(--transition); text-decoration:none; }
+    .platform-badge.gumroad { color:#ff90e8; border-color:rgba(255,144,232,.35); background:rgba(255,144,232,.1); }
+    .platform-badge.gumroad:hover { background:rgba(255,144,232,.22); }
+    .platform-badge.payhip { color:#3b82f6; border-color:rgba(59,130,246,.3); background:rgba(59,130,246,.1); }
+    .platform-badge.payhip:hover { background:rgba(59,130,246,.22); }
+    .lang-note { font-size:.75rem; color:rgba(255,255,255,.5); margin-top:8px; }
+
+    @media (max-width:900px) { .prod-hero-inner { grid-template-columns:1fr; } .features-list { grid-template-columns:1fr; } .use-cases { grid-template-columns:1fr 1fr; } }
+    @media (max-width:580px) { .use-cases { grid-template-columns:1fr; } .lead-form { flex-direction:column; } }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "RiskMap Pro — Cartographie des risques PME",
+  "description": "Template Excel de cartographie des risques pour PME. Simple, visuel et opérationnel sans formation. Carte thermique couleur et plan d'action intégré.",
+  "brand": {"@type": "Brand", "name": "XLDashboard"},
+  "offers": {"@type": "Offer", "price": "15.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://flissidigital.gumroad.com/l/cartographiedesrisques"},
+  "url": "https://xldashboard.store/templates/riskmap-pro.html"
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Accueil","item":"https://xldashboard.store/"},
+  {"@type":"ListItem","position":2,"name":"Produits","item":"https://xldashboard.store/products.html"},
+  {"@type":"ListItem","position":3,"name":"RiskMap Pro","item":"https://xldashboard.store/templates/riskmap-pro.html"}
+]}
+</script>
+</head>
+<body data-page="product">
+
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="XLDashboard Store — Accueil">
+        <img src="../XLdashboardStore1.png" alt="XLDashboard Store" style="height:55px;width:auto;object-fit:contain;max-width:220px;mix-blend-mode:multiply;">
+        <span class="nav-slogan" data-i18n="nav.slogan">Analysez. Optimisez. Réussissez.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="../products.html" data-i18n="nav.products" class="active">Produits</a></li>
+        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a href="../products.html" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.cta">Voir les templates</a>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu">
+      <a href="../index.html" data-i18n="nav.home">Accueil</a>
+      <a href="../products.html" data-i18n="nav.products">Produits</a>
+      <a href="../about.html" data-i18n="nav.about">À propos</a>
+      <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switcher" style="padding:8px 0">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="ar">عربي</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="lang-banner" class="lang-banner" style="display:none">
+  <span id="lang-banner-text"></span>
+  <button id="lang-banner-close" class="lang-banner-close">×</button>
+</div>
+
+<!-- ===== PRODUCT HERO ===== -->
+<div class="prod-hero">
+  <div class="container">
+    <div class="prod-hero-inner">
+      <div class="prod-hero-content">
+        <nav aria-label="Fil d'Ariane" style="margin-bottom:16px;font-size:.82rem;color:rgba(255,255,255,.45)">
+          <a href="../index.html" style="color:rgba(255,255,255,.45)">Accueil</a>
+          <span style="margin:0 6px">›</span>
+          <a href="../products.html" style="color:rgba(255,255,255,.45)">Produits</a>
+          <span style="margin:0 6px">›</span>
+          <span style="color:var(--emerald)">RiskMap Pro</span>
+        </nav>
+        <span class="badge" style="background:rgba(63,175,158,.15);border:1px solid rgba(63,175,158,.3);color:var(--emerald-light)">🗺️ Gestion des risques PME</span>
+        <h1>RiskMap Pro — Cartographie des risques PME</h1>
+        <p class="hero-desc">La version simple et visuelle de la cartographie des risques, pensée pour les PME et dirigeants qui souhaitent structurer leur pilotage des risques sans jargon technique ni formation complexe.</p>
+        <div class="prod-price-box">
+          <span class="price">15 $</span>
+          <span class="once">achat unique — téléchargement immédiat</span>
+        </div>
+        <div class="prod-buy-btns">
+          <a href="https://flissidigital.gumroad.com/l/cartographiedesrisques"
+             class="platform-badge gumroad" target="_blank" rel="noopener">⬇ Acheter sur Gumroad</a>
+        </div>
+      </div>
+      <div class="prod-hero-visual">
+        <div class="todo-screenshot">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="m21 15-5-5L5 21"/>
+          </svg>
+          <span>TODO : capture d'écran Excel — carte thermique des risques</span>
+        </div>
+        <div class="todo-screenshot">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="m21 15-5-5L5 21"/>
+          </svg>
+          <span>TODO : capture d'écran Excel — fiche risque et plan d'action</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT BODY ===== -->
+<div class="prod-body">
+    <!-- TODO lead magnet : connecter ce formulaire à un service email (Mailchimp, Brevo, ConvertKit…) -->
+    <div class="lead-magnet">
+      <h3>📥 Recevez un aperçu gratuit</h3>
+      <p>Téléchargez gratuitement un exemple de carte thermique des risques pour voir le rendu du template.</p>
+      <form class="lead-form" onsubmit="return false">
+        <input type="email" placeholder="votre@email.com" required />
+        <button type="submit">Recevoir</button>
+      </form>
+      <div class="todo-box">TODO : brancher ce formulaire à votre outil d'email marketing (Mailchimp, Brevo, ConvertKit…)</div>
+    </div>
+
+    <div class="prod-section">
+      <h2>Ce que contient le <span>template</span></h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Carte thermique des risques</strong><span>Visualisation automatique couleur (vert/orange/rouge) selon probabilité × impact.</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Fiche risque par domaine</strong><span>Jusqu'à 5 domaines personnalisables : finance, opérations, RH, SI, juridique…</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Scoring simplifié</strong><span>Grille de cotation claire et intuitive — aucune formation requise.</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Plan d'action et responsable</strong><span>Pour chaque risque : action corrective, pilote, délai, état d'avancement.</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Vue synthétique dirigeant</strong><span>Tableau de bord 1 page pour présenter les risques en réunion de direction.</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Données d'exemple incluses</strong><span>Pré-rempli avec un cas concret — prêt à adapter à votre contexte.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-section">
+      <h2>À qui s'adresse ce <span>template</span> ?</h2>
+      <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-icon">🏪</div>
+        <div class="use-case-title">Dirigeants de PME</div>
+        <p class="use-case-desc">Première cartographie des risques structurée, présentable aux partenaires et banquiers.</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">📋</div>
+        <div class="use-case-title">Responsables qualité</div>
+        <p class="use-case-desc">Identification et suivi des risques opérationnels dans une démarche ISO ou HACCP.</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">💼</div>
+        <div class="use-case-title">Experts-comptables</div>
+        <p class="use-case-desc">Outil à déployer chez les clients PME pour renforcer le pilotage des risques.</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">🎓</div>
+        <div class="use-case-title">Consultants</div>
+        <p class="use-case-desc">Base de travail rapide pour une mission de risk assessment en contexte PME.</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">🏥</div>
+        <div class="use-case-title">Associations / ESS</div>
+        <p class="use-case-desc">Cartographie simple pour les structures qui n'ont pas de fonction risk dédiée.</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">🏗️</div>
+        <div class="use-case-title">Artisans / TPE</div>
+        <p class="use-case-desc">Identifier les 3-5 risques clés de l'activité et définir des actions concrètes.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="prod-section">
+      <h2>Spécifications <span>techniques</span></h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Format</strong><span>Microsoft Excel .xlsx — aucune macro VBA</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Compatibilité</strong><span>Excel 2016+, Microsoft 365 (PC, Mac)</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Langue du fichier</strong><span>Français</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Contenu inclus</strong><span>Exemple pré-rempli + notice d'utilisation intégrée</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Personnalisation</strong><span>Domaines, seuils, couleurs entièrement modifiables</span></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="feature-text"><strong>Mises à jour</strong><span>Incluses et téléchargeables gratuitement</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cta-section" style="border-radius:var(--radius);margin:0 -24px">
+      <div class="container">
+        <h2 class="cta-title" style="font-size:1.6rem">Structurez vos risques en moins d'une heure</h2>
+        <p class="cta-desc">RiskMap Pro est fait pour les dirigeants qui veulent un outil concret, pas un manuel de gestion des risques.</p>
+        <div class="cta-actions">
+          <a href="https://flissidigital.gumroad.com/l/cartographiedesrisques"
+             class="btn btn-primary" target="_blank" rel="noopener">⬇ Acheter sur Gumroad — 15 $</a>
+          <a href="../contact.html" class="btn btn-outline">Une question ? Contactez-nous</a>
+        </div>
+      </div>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo" style="color:white" aria-label="XLDashboard Store — Accueil">
+          <img src="../XLdashboardStore1.png" alt="XLDashboard Store" style="height:40px;width:auto;object-fit:contain;">
+        </a>
+        <p data-i18n="footer.desc">Templates Excel professionnels conçus par un expert en audit et finance.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/mourad-flissi-18089923/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://flissidigital.gumroad.com/" class="social-btn" aria-label="Gumroad" target="_blank" rel="noopener">G</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../products.html">Produits</a></li>
+          <li><a href="../about.html">À propos</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Produits</div>
+        <ul class="footer-links">
+          <li><a href="erm-toolkit.html">ERM Toolkit</a></li>
+          <li><a href="riskmap-pro.html">RiskMap Pro</a></li>
+          <li><a href="micro-entrepreneur-2026.html">Micro-Entrepreneur 2026</a></li>
+          <li><a href="trucking-cost-simulator.html">Trucking Cost Simulator</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Acheter</div>
+        <ul class="footer-links">
+          <li><a href="https://flissidigital.gumroad.com/" target="_blank" rel="noopener">Gumroad</a></li>
+          <li><a href="https://payhip.com/FlissiDigital" target="_blank" rel="noopener">Payhip</a></li>
+          <li><a href="../contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 XLDashboard — Mourad Flissi. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px">
+        <a href="../mentions-legales.html">Mentions légales</a>
+        <a href="../cgv.html">CGV</a>
+        <a href="../politique-confidentialite.html">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/i18n.js"></script>
+
+<div class="float-social">
+  <a href="https://wa.me/213540226131?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20templates%20Excel%20XLDashboard"
+     class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="26" height="26">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.847L.057 23.57a.75.75 0 0 0 .906.919l5.857-1.435A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.943 9.943 0 0 1-5.073-1.384l-.363-.214-3.763.923.967-3.665-.236-.376A9.946 9.946 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    <span class="float-pulse"></span>
+  </a>
+  <a href="https://m.me/xldashboard" class="float-btn float-messenger" target="_blank" rel="noopener" aria-label="Messenger">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="26" height="26">
+      <path d="M12 0C5.373 0 0 5.04 0 11.255c0 3.457 1.7 6.542 4.373 8.582V24l3.981-2.193a13.08 13.08 0 0 0 3.646.514C18.627 22.321 24 17.47 24 11.255 24 5.04 18.627 0 12 0zm1.22 15.144L9.9 11.667 3.52 15.144 10.506 7.8l3.368 3.477 6.327-3.477-6.981 7.344z"/>
+    </svg>
+  </a>
+  <a href="https://instagram.com/xldashboard" class="float-btn float-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="26" height="26">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+</div>
+</body>
+</html>
