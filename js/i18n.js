@@ -240,7 +240,7 @@ const T = {
     'about.profile.l2':  'LinkedIn',
     'about.profile.l3':  'Voir mes templates',
     'about.bio.h1':      'Qui suis-je ?',
-    'about.bio.p1':      "Je m'appelle <strong>Mourad Flissi</strong>, professionnel de l'audit interne et du contrôle financier avec plus de TODO_ANNEES ans d'expérience dans des environnements exigeants — industrie, services et transport.",
+    'about.bio.p1':      "Je m'appelle <strong>Mourad Flissi</strong>, professionnel de l'audit interne et du contrôle financier avec plus de 10 ans d'expérience dans des environnements exigeants — industrie, services et transport.",
     'about.bio.p2':      "Tout au long de ma carrière, j'ai constaté que les équipes finance, risques et opérations passent un temps considérable à (re)créer des outils de pilotage dans Excel.",
     'about.bio.p3':      "J'ai donc décidé de capitaliser sur mon expérience pour créer <strong>XLDashboard</strong> : une boutique de templates Excel professionnels, rigoureux et directement opérationnels.",
     'about.exp.h':       "Mes domaines d'expertise",
