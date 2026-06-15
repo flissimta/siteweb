@@ -1208,3 +1208,19 @@ ul { list-style: none; }
   margin-top: 2px;
 }
 [dir="rtl"] .nav-slogan { text-align: right; }
+
+/* ── Logo navbar — taille et alignement ── */
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  max-width: 180px;
+  display: block;
+}
+.nav-inner { height: 65px; }
+.nav-logo { justify-content: center; }
+
+@media (max-width: 768px) {
+  .nav-logo img { height: 30px; max-width: 140px; }
+  .nav-inner { height: 56px; }
+}
