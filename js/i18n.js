@@ -33,6 +33,7 @@ const T = {
     'nav.about':       'À propos',
     'nav.contact':     'Contact',
     'nav.cta':         'Voir les templates',
+    'nav.slogan':      'Analysez. Optimisez. Réussissez.',
     'nav.cta.contact': 'Devis sur mesure',
 
     /* ── BANNER ── */
@@ -333,6 +334,7 @@ const T = {
     'nav.about':       'About',
     'nav.contact':     'Contact',
     'nav.cta':         'View Templates',
+    'nav.slogan':      'Analyze. Optimize. Succeed.',
     'nav.cta.contact': 'Custom Quote',
 
     /* ── BANNER ── */
@@ -633,6 +635,7 @@ const T = {
     'nav.about':       'من نحن',
     'nav.contact':     'اتصل بنا',
     'nav.cta':         'عرض القوالب',
+    'nav.slogan':      'حلّل. طوّر. انجح.',
     'nav.cta.contact': 'عرض مخصص',
 
     /* ── BANNER ── */
