@@ -76,6 +76,8 @@
     [dir="rtl"] .form-check { flex-direction: row-reverse; }
 
     @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-form-card { padding: 28px 20px; } }
+
+    .form-success-banner { background: rgba(74,222,128,.12); border: 1.5px solid #4ade80; color: #15803d; font-weight: 600; font-size: .95rem; padding: 16px 20px; border-radius: var(--radius-sm); margin-bottom: 32px; text-align: center; }
   </style>
 <script type="application/ld+json">
 {
@@ -229,6 +231,7 @@
 
 <section class="section">
   <div class="container">
+    <div id="form-success-banner" class="form-success-banner" style="display:none" data-i18n="contact.form.success.banner">✅ Votre message a bien été envoyé ! Je vous réponds sous 24h.</div>
     <div class="contact-grid">
 
       <div>
@@ -288,7 +291,9 @@
         <div class="form-title" data-i18n="contact.form.title">Envoyez-moi un message</div>
         <div class="form-subtitle" data-i18n="contact.form.subtitle">Toutes les réponses dans les 24h ouvrées.</div>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formspree.io/f/meebzaqd" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nouveau message depuis XLDashboard.store">
+          <input type="hidden" name="_next" value="https://xldashboard.store/contact.html?success=true">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="firstname"><span data-i18n="contact.form.firstname">Prénom</span> <span class="required">*</span></label>
@@ -451,25 +456,13 @@
     translateSelectOptions(lang);
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
-  // Form submit with i18n success message
-  const contactForm = document.querySelector('#contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('button[type="submit"]');
-      const lang = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'fr';
-      const successMsg = TRANSLATIONS[lang]['contact.form.sent'] || '✓ Message envoyé !';
-      const originalHTML = btn.innerHTML;
-      btn.innerHTML = successMsg;
-      btn.style.background = '#4ade80';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.style.background = '';
-        btn.disabled = false;
-        contactForm.reset();
-      }, 3500);
-    });
+  // Affiche le bandeau de confirmation après redirection Formspree (?success=true)
+  if (new URLSearchParams(window.location.search).get('success') === 'true') {
+    const banner = document.getElementById('form-success-banner');
+    if (banner) {
+      banner.style.display = 'block';
+      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 </script>
 

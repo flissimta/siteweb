@@ -321,6 +321,7 @@ const T = {
     'contact.form.privacy': "J'accepte que mes données soient traitées dans le cadre de cette demande de contact, conformément à la <a href=\"#\" style=\"color:var(--emerald-dark);font-weight:600\">politique de confidentialité</a>.",
     'contact.form.submit': 'Envoyer le message',
     'contact.form.sent':   '✓ Message envoyé !',
+    'contact.form.success.banner': '✅ Votre message a bien été envoyé ! Je vous réponds sous 24h.',
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -625,6 +626,7 @@ const T = {
     'contact.form.privacy': 'I agree that my data will be processed in the context of this contact request, in accordance with the <a href="#" style="color:var(--emerald-dark);font-weight:600">privacy policy</a>.',
     'contact.form.submit': 'Send Message',
     'contact.form.sent':   '✓ Message sent!',
+    'contact.form.success.banner': "✅ Your message has been sent! I'll reply within 24h.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -933,6 +935,7 @@ const T = {
     'contact.form.privacy': 'أوافق على معالجة بياناتي في إطار طلب التواصل هذا، وفقاً لـ<a href="#" style="color:var(--emerald-dark);font-weight:600">سياسة الخصوصية</a>.',
     'contact.form.submit': 'إرسال الرسالة',
     'contact.form.sent':   '✓ تم إرسال الرسالة!',
+    'contact.form.success.banner': '✅ تم إرسال رسالتك بنجاح! سأرد عليك خلال 24 ساعة.',
   }
 };
 
