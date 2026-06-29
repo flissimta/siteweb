@@ -77,7 +77,6 @@
 
     @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-form-card { padding: 28px 20px; } }
 
-    .form-success-banner { background: rgba(74,222,128,.12); border: 1.5px solid #4ade80; color: #15803d; font-weight: 600; font-size: .95rem; padding: 16px 20px; border-radius: var(--radius-sm); margin-bottom: 32px; text-align: center; }
   </style>
 <script type="application/ld+json">
 {
@@ -231,7 +230,6 @@
 
 <section class="section">
   <div class="container">
-    <div id="form-success-banner" class="form-success-banner" style="display:none" data-i18n="contact.form.success.banner">✅ Votre message a bien été envoyé ! Je vous réponds sous 24h.</div>
     <div class="contact-grid">
 
       <div>
@@ -291,33 +289,35 @@
         <div class="form-title" data-i18n="contact.form.title">Envoyez-moi un message</div>
         <div class="form-subtitle" data-i18n="contact.form.subtitle">Toutes les réponses dans les 24h ouvrées.</div>
 
-        <form id="contact-form" action="https://formspree.io/f/meebzaqd" method="POST" novalidate>
+        <div data-fs-success style="display:none; padding:16px; background:#3FAF9E; color:#0D1B2A; border-radius:8px; margin-bottom:16px; font-weight:500;"></div>
+        <div data-fs-error style="display:none; padding:16px; background:#E74C3C; color:white; border-radius:8px; margin-bottom:16px;"></div>
+
+        <form id="contact-form" novalidate>
           <input type="hidden" name="_subject" value="Nouveau message depuis XLDashboard.store">
-          <input type="hidden" name="_next" value="https://xldashboard.store/contact.html?success=true">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="firstname"><span data-i18n="contact.form.firstname">Prénom</span> <span class="required">*</span></label>
-              <input class="form-input" type="text" id="firstname" name="firstname" data-i18n-ph="contact.form.ph.fn" placeholder="Jean" required />
+              <input class="form-input" type="text" id="firstname" name="firstname" data-fs-field data-i18n-ph="contact.form.ph.fn" placeholder="Jean" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="lastname"><span data-i18n="contact.form.lastname">Nom</span> <span class="required">*</span></label>
-              <input class="form-input" type="text" id="lastname" name="lastname" data-i18n-ph="contact.form.ph.ln" placeholder="Dupont" required />
+              <input class="form-input" type="text" id="lastname" name="lastname" data-fs-field data-i18n-ph="contact.form.ph.ln" placeholder="Dupont" required />
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email"><span data-i18n="contact.form.email">Email</span> <span class="required">*</span></label>
-            <input class="form-input" type="email" id="email" name="email" data-i18n-ph="contact.form.ph.email" placeholder="votre@email.com" required />
+            <input class="form-input" type="email" id="email" name="email" data-fs-field data-i18n-ph="contact.form.ph.email" placeholder="votre@email.com" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="company"><span data-i18n="contact.form.company">Entreprise / Organisation</span></label>
-            <input class="form-input" type="text" id="company" name="company" data-i18n-ph="contact.form.ph.co" placeholder="Nom de votre entreprise (optionnel)" />
+            <input class="form-input" type="text" id="company" name="company" data-fs-field data-i18n-ph="contact.form.ph.co" placeholder="Nom de votre entreprise (optionnel)" />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="subject"><span data-i18n="contact.form.subject">Objet</span> <span class="required">*</span></label>
-            <select class="form-select" id="subject" name="subject" required>
+            <select class="form-select" id="subject" name="subject" data-fs-field required>
               <option value="" disabled selected data-i18n-opt="contact.form.sel.default">Sélectionnez un objet</option>
               <option value="question" data-i18n-opt="contact.form.sel.1">Question sur un template</option>
               <option value="support" data-i18n-opt="contact.form.sel.2">Support technique</option>
@@ -330,15 +330,15 @@
 
           <div class="form-group">
             <label class="form-label" for="message"><span data-i18n="contact.form.message">Message</span> <span class="required">*</span></label>
-            <textarea class="form-textarea" id="message" name="message" data-i18n-ph="contact.form.ph.msg" placeholder="Décrivez votre besoin ou votre question en détail…" required></textarea>
+            <textarea class="form-textarea" id="message" name="message" data-fs-field data-i18n-ph="contact.form.ph.msg" placeholder="Décrivez votre besoin ou votre question en détail…" required></textarea>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" id="privacy" name="privacy" required />
+            <input type="checkbox" id="privacy" name="privacy" data-fs-field required />
             <label for="privacy" data-i18n-html="contact.form.privacy">J'accepte que mes données soient traitées dans le cadre de cette demande de contact, conformément à la <a href="politique-confidentialite.html" style="color:var(--emerald-dark);font-weight:600">politique de confidentialité</a>.</label>
           </div>
 
-          <button type="submit" class="form-submit">
+          <button type="submit" class="form-submit" data-fs-submit-btn>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
             <span data-i18n="contact.form.submit">Envoyer le message</span>
           </button>
@@ -456,15 +456,38 @@
     translateSelectOptions(lang);
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
-  // Affiche le bandeau de confirmation après redirection Formspree (?success=true)
-  if (new URLSearchParams(window.location.search).get('success') === 'true') {
-    const banner = document.getElementById('form-success-banner');
-    if (banner) {
-      banner.style.display = 'block';
-      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+  // Messages de succès / erreur multilingues pour le formulaire Formspree (AJAX)
+  function fsMessageKeys(lang) {
+    return {
+      success: { fr: 'contact.form.success.banner', en: 'contact.form.success.banner', ar: 'contact.form.success.banner' }[lang],
+      error: { fr: 'contact.form.error.banner', en: 'contact.form.error.banner', ar: 'contact.form.error.banner' }[lang]
+    };
   }
+
+  function updateFsMessages() {
+    const lang = getLang();
+    const t = (typeof T !== 'undefined' && T[lang]) ? T[lang] : T.fr;
+    const successEl = document.querySelector('[data-fs-success]');
+    const errorEl = document.querySelector('[data-fs-error]');
+    if (successEl) successEl.textContent = t['contact.form.success.banner'] || '';
+    if (errorEl) errorEl.textContent = t['contact.form.error.banner'] || '';
+  }
+
+  document.addEventListener('DOMContentLoaded', updateFsMessages);
+
+  new MutationObserver(updateFsMessages)
+    .observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  document.addEventListener('submit', (e) => {
+    if (e.target && e.target.id === 'contact-form') updateFsMessages();
+  });
 </script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'meebzaqd' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <!-- ===== FLOATING SOCIAL BUTTONS ===== -->
 <div class="float-social">

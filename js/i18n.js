@@ -322,6 +322,7 @@ const T = {
     'contact.form.submit': 'Envoyer le message',
     'contact.form.sent':   '✓ Message envoyé !',
     'contact.form.success.banner': '✅ Votre message a bien été envoyé ! Je vous réponds sous 24h.',
+    'contact.form.error.banner': '❌ Une erreur est survenue. Réessayez ou contactez-moi directement par email.',
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -627,6 +628,7 @@ const T = {
     'contact.form.submit': 'Send Message',
     'contact.form.sent':   '✓ Message sent!',
     'contact.form.success.banner': "✅ Your message has been sent! I'll reply within 24h.",
+    'contact.form.error.banner': "❌ An error occurred. Please try again or email me directly.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -936,6 +938,7 @@ const T = {
     'contact.form.submit': 'إرسال الرسالة',
     'contact.form.sent':   '✓ تم إرسال الرسالة!',
     'contact.form.success.banner': '✅ تم إرسال رسالتك بنجاح! سأرد عليك خلال 24 ساعة.',
+    'contact.form.error.banner': '❌ حدث خطأ. حاول مرة أخرى أو راسلني مباشرة عبر البريد الإلكتروني.',
   }
 };
 
